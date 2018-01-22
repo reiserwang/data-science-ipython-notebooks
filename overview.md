@@ -1,9 +1,10 @@
 # Aritificial Intelligence, Machine Learning, and Deep Learning
-* [Aritificial Intelligence, Machine Learning, and Deep Learning](https://blogs.nvidia.com/wp-content/uploads/2016/07/Deep_Learning_Icons_R5_PNG.jpg.png)
+<p><img src= "https://blogs.nvidia.com/wp-content/uploads/2016/07/Deep_Learning_Icons_R5_PNG.jpg.png" /></p>
 
 # Fundamentals on Deep Leanring
-* [Types of Neural Networks](https://pbs.twimg.com/media/DNk_8dDW0AAJaWr.jpg)
-* [Convolutional neuro network (CNN)](http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg)
+* Types of Neural Networks
+<p><img src="https://pbs.twimg.com/media/DNk_8dDW0AAJaWr.jpg" /></p>
+* Convolutional neuro network (CNN)<p><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg" /></p>
 
 # Deep Learning Frameworks
 
@@ -13,6 +14,7 @@
 * High-level API's (TF-Learn, TF-Slim, Keras)
 * (+)  Auto differentiation - easy multi-GPU/multi-node
 * (+) Active on Github. Lot's of new APIs
+> [Tensorflow Tutorials](README.md#tensor-flow-tutorials)
 
 ## 2. Theano
 ## 3. Keras
@@ -21,6 +23,7 @@
 * (-) Less flexible and less projects (as of current than caffe).
 * (-) Multi-GPU not working 100%
 * (-) No RBM
+> [Keras tutorials](README.md#keras-tutorials)
 
 ## 4. Torch
 ## 5. Caffe
