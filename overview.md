@@ -4,7 +4,11 @@
 # Fundamentals on Deep Leanring
 * Types of Neural Networks
 <p><img src="https://pbs.twimg.com/media/DNk_8dDW0AAJaWr.jpg" /></p>
-* Convolutional neuro network (CNN)<p><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg" /></p>
+
+## Convolutional neuro network (CNN)
+<p><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg" /></p>
+
+* [Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/convolutional-networks/)
 
 # Deep Learning Frameworks
 
