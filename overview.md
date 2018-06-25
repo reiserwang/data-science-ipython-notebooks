@@ -8,7 +8,7 @@
 
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
-
+> Sample codes from http://www.blopig.com/blog/2017/07/using-random-forests-in-python-with-scikit-learn/ 
 ``` python
 from numpy import *
 from sklearn.datasets import load_iris # import datasets
@@ -80,8 +80,8 @@ print(f'Mean accuracy score: {accuracy:.3}')
 > Out-of-bag score estimate: 0.973
 Mean accuracy score: 0.933
 
-## Random Forest Regression
-
+## Gradient Boosted Machines (GBM)
+[scikit - Gradient Boosting Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)
 
 
 ## Convolutional neuro network (CNN)
@@ -89,10 +89,6 @@ Mean accuracy score: 0.933
 
 * Types of Neural Networks
 <p><img src="https://pbs.twimg.com/media/DNk_8dDW0AAJaWr.jpg" /></p>
-
-
-
-
 
 
 * [Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/convolutional-networks/)
