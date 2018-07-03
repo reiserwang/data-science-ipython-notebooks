@@ -28,7 +28,7 @@ X, y = make_blobs(n_samples=1000, centers=4,
 plt.scatter(X[:, 0], X[:, 1], s=50);
 plt.show();
 ```
-<p> <img src="data\scikitpu1.png" />
+<p> <img src="data/scikitpu1.png" />
 ```python
 from sklearn.cluster import KMeans
 est = KMeans(4)  # 4 clusters
@@ -37,7 +37,7 @@ y_kmeans = est.predict(X)
 plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');
 plt.show();
 ```
-<p> <img src="data\scikitpu2.png" />
+<p> <img src="data/scikitpy2.png" />
 
 
 ## Random Forest
@@ -55,14 +55,19 @@ visualize_tree(clf, X[:100], y[:100], boundaries=False)
 plt.figure()
 score=clf.score(X[:-500],y[:-500])
 print("score=",score)
+```
+<p> <img src="data/scikitpy3.png" />
+Output:
+> score= 0.858
 
+``` python
 visualize_tree(clf, X[-100:], y[-100:], boundaries=False)
 plt.show();
 score=clf.score(X[:500],y[:500])
 print("score=",score)
 ```
+<p> <img src="data/scikitpy42.png" />
 Output:
-> score= 0.858
 > score= 0.766
 
 ### Bagging (bootstrap aggregating)
