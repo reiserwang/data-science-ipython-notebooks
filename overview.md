@@ -1,91 +1,78 @@
 # Aritificial Intelligence, Machine Learning, and Deep Learning
-<p><img src= "https://blogs.nvidia.com/wp-content/uploads/2016/07/Deep_Learning_Icons_R5_PNG.jpg.png" /></p>
+<p><img src= "http://scikit-learn.org/dev/_static/ml_map.png" /></p>
 
 # Fundamentals on Machine Leanring
 
-## Linear Regression
-<p><img src="https://en.wikipedia.org/wiki/Logistic_regression#/media/File:Exam_pass_logistic_curve.jpeg"/>
+## Logistic Regression
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
 
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
-> Sample codes from http://www.blopig.com/blog/2017/07/using-random-forests-in-python-with-scikit-learn/ 
+
 ``` python
-from numpy import *
-from sklearn.datasets import load_iris # import datasets
+from sklearn.cluster import KMeans
+k_means = KMeans(n_clusters=3, random_state=0) # Fixing the RNG in kmeans
+k_means.fit(X)
+y_pred = k_means.predict(X)
 
-# load the dataset: iris
-# Sklearn comes with several nicely formatted real-world toy data sets which we can use to experiment with the tools at our disposal. We’ll be using the venerable iris dataset for classification and the Boston housing set for regression. 
+plt.scatter(X_reduced[:, 0], X_reduced[:, 1], c=y_pred,
+           cmap='rainbow');
 
-iris = load_iris()
-samples = iris.data
- #print samples
-target = iris.target
-
- # import the LogisticRegression
-from sklearn.linear_model import LogisticRegression
-classifier = LogisticRegression() #all use default parameters
-classifier.fit(samples, target) 
-
-x = classifier.predict([5, 3, 5, 2.5]) 
-
-print x
+plt.show();
 ```
+
+``` python
+from sklearn.datasets.samples_generator import make_blobs
+X, y = make_blobs(n_samples=1000, centers=4,
+                  random_state=0, cluster_std=1.20)
+plt.scatter(X[:, 0], X[:, 1], s=50);
+plt.show();
+
+from sklearn.cluster import KMeans
+est = KMeans(4)  # 4 clusters
+est.fit(X)
+y_kmeans = est.predict(X)
+plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');
+plt.show();
+```
+
 
 ## Random Forest
-
+<p><img src="https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg"/></p>
 [scikit - random forest classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-``` Python
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-from sklearn import datasets
-iris = datasets.load_iris()
-
-df = pd.DataFrame(iris.data, columns=iris.feature_names)
-
-# sklearn provides the iris species as integer values since this is required for classification
-# here we're just adding a column with the species names to the dataframe for visualisation
-df['species'] = np.array([iris.target_names[i] for i in iris.target])
-
-sns.pairplot(df, hue='species')
-```
-
-
-``` Python
-from sklearn.model_selection import train_test_split
-
-X_train, X_test, y_train, y_test = train_test_split(df[iris.feature_names], iris.target, test_size=0.5, stratify=iris.target, random_state=123456)
-
-
-```
-> Fit a random forest classifier to our training set. For the most part we’ll use the default settings since they’re quite robust. One exception is the out-of-bag estimate: by default an out-of-bag error estimate is not computed, so we need to tell the classifier object that we want this.
-
-``` Python
-from sklearn.ensemble import RandomForestClassifier
-
-rf = RandomForestClassifier(n_estimators=100, oob_score=True, random_state=123456)
-rf.fit(X_train, y_train)
-```
-> Let’s see how well our model performs when classifying our unseen test data. For a random forest classifier, the out-of-bag score computed by sklearn is an estimate of the classification accuracy we might expect to observe on new data. We’ll compare this to the actual score obtained on our test data.
 
 ``` python
-from sklearn.metrics import accuracy_score
-predicted = rf.predict(X_test)
-accuracy = accuracy_score(y_test, predicted)
-print(f'Out-of-bag score estimate: {rf.oob_score_:.3}')
-print(f'Mean accuracy score: {accuracy:.3}')
+from sklearn.tree import DecisionTreeClassifier
+import numpy as np
+
+clf = DecisionTreeClassifier()
+
+plt.figure()
+visualize_tree(clf, X[:100], y[:100], boundaries=False)
+plt.figure()
+score=clf.score(X[:-500],y[:-500])
+print("score=",score)
+
+visualize_tree(clf, X[-100:], y[-100:], boundaries=False)
+plt.show();
+score=clf.score(X[:500],y[:500])
+print("score=",score)
 ```
-> Out-of-bag score estimate: 0.973
-Mean accuracy score: 0.933
+
+
+### Bagging (bootstrap aggregating)
+### Boosting 
+
+
 
 ## Gradient Boosted Machines (GBM)
+Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
+
 [scikit - Gradient Boosting Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)
 
 
 ## Convolutional neuro network (CNN)
-<p><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg" /></p>
+<p><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg"/></p>
 
 * Types of Neural Networks
 <p><img src="https://pbs.twimg.com/media/DNk_8dDW0AAJaWr.jpg" /></p>
