@@ -1,11 +1,22 @@
 # Aritificial Intelligence, Machine Learning, and Deep Learning
+
+Reiser Wang 
+
+https://github.com/reiserwang/data-science-ipython-notebooks
+
+
 <p><img src= "http://scikit-learn.org/dev/_static/ml_map.png" /></p>
->[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)
+
+*[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)*
 
 
 # Fundamentals on Machine Leanring
 
 ## Logistic Regression
+<p>In statistics, the logistic model (or logit model) is a statistical model that is usually taken to apply to a binary dependent variable. In regression analysis, logistic regression or logit regression is estimating the parameters of a logistic model. More formally, a logistic model is one where the log-odds of the probability of an event is a linear combination of independent or predictor variables. The two possible dependent variable values are often labelled as "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. The binary logistic regression model can be generalized to more than two levels of the dependent variable: categorical outputs with more than two values are modelled by multinomial logistic regression, and if the multiple categories are ordered, by ordinal logistic regression, for example the proportional odds ordinal logistic model. 
+<p>Logistic regression is used in various fields, including machine learning, most medical fields, and social sciences.
+
+*[Souce: Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression)*
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
 
 
@@ -15,7 +26,8 @@
 k-means clustering is a method of vector quantization, originally from signal processing, that is popular for cluster analysis in data mining. k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells.
 
 The problem is computationally difficult (NP-hard); however, there are efficient heuristic algorithms that are commonly employed and converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. Additionally, they both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the expectation-maximization mechanism allows clusters to have different shapes.
->[source:wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)
+
+*[Source:Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)*
 
 
 ``` python
@@ -49,13 +61,15 @@ plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');
 plt.show();
 ```
 
-<p> <img src="data/scikitpy2.png" />
+<p> <img src="/data/scikitpy2.png" />
 
 
 ## Random Forests Clustering
 <p><img src="https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg"/> *[source](https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg)* </p>
 
-Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set. [Source: Wikipedia](https://en.wikipedia.org/wiki/Random_forest)
+Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set. 
+
+*[Source: Wikipedia](https://en.wikipedia.org/wiki/Random_forest)*
 
 
 
@@ -73,7 +87,7 @@ plt.figure()
 score=clf.score(X[:-500],y[:-500])
 print("score=",score)
 ```
-<p> <img src="data/scikitpy3.png" />
+<p> <img src="../data/scikitpy3.png" />
 
 > score= 0.858
 
@@ -84,7 +98,7 @@ score=clf.score(X[:500],y[:500])
 print("score=",score)
 ```
 
-<p><img src="data/scikitpy42.png" />
+<p><img src="../data/scikitpy42.png" />
 
 > score= 0.766
 
