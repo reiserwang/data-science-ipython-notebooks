@@ -50,7 +50,7 @@ plt.scatter(X[:, 0], X[:, 1], s=50);
 plt.show();
 ```
 
-<p> <img src="data/scikitpu1.png" />
+<p> <img src="images/scikitpy1.png" />
 
 ```python
 from sklearn.cluster import KMeans
@@ -61,13 +61,13 @@ plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');
 plt.show();
 ```
 
-<p> <img src="/data/scikitpy2.png" />
+<p> <img src="images/scikitpy2.png" />
 
 
 ## Random Forests Clustering
 <p><img src="https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg"/> *[source](https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg)* </p>
 
-Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set. 
+Random frests or random decision forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set. 
 
 *[Source: Wikipedia](https://en.wikipedia.org/wiki/Random_forest)*
 
@@ -87,7 +87,7 @@ plt.figure()
 score=clf.score(X[:-500],y[:-500])
 print("score=",score)
 ```
-<p> <img src="../data/scikitpy3.png" />
+<p> <img src="images/scikitpy3.png" />
 
 > score= 0.858
 
@@ -98,7 +98,7 @@ score=clf.score(X[:500],y[:500])
 print("score=",score)
 ```
 
-<p><img src="../data/scikitpy42.png" />
+<p><img src="images/scikitpy4.png" />
 
 > score= 0.766
 
@@ -116,7 +116,7 @@ Gradient boosting is a machine learning technique for regression and classificat
 > ** To-Do: add sample codes here **
 
 ## Convolutional neuro network (CNN)
-<p><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg"/></p>
+<p align="center"><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg"/></p>
 
 * Types of Neural Networks
 <p><img src="https://pbs.twimg.com/media/DNk_8dDW0AAJaWr.jpg" /></p>
