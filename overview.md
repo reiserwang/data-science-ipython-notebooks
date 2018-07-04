@@ -1,12 +1,21 @@
 # Aritificial Intelligence, Machine Learning, and Deep Learning
 <p><img src= "http://scikit-learn.org/dev/_static/ml_map.png" /></p>
+>[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)
+
 
 # Fundamentals on Machine Leanring
 
 ## Logistic Regression
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
 
+
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+
+## K-Means Clustering
+k-means clustering is a method of vector quantization, originally from signal processing, that is popular for cluster analysis in data mining. k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells.
+
+The problem is computationally difficult (NP-hard); however, there are efficient heuristic algorithms that are commonly employed and converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. Additionally, they both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the expectation-maximization mechanism allows clusters to have different shapes.
+>[source:wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)
 
 
 ``` python
@@ -28,7 +37,9 @@ X, y = make_blobs(n_samples=1000, centers=4,
 plt.scatter(X[:, 0], X[:, 1], s=50);
 plt.show();
 ```
+
 <p> <img src="data/scikitpu1.png" />
+
 ```python
 from sklearn.cluster import KMeans
 est = KMeans(4)  # 4 clusters
@@ -37,11 +48,17 @@ y_kmeans = est.predict(X)
 plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');
 plt.show();
 ```
+
 <p> <img src="data/scikitpy2.png" />
 
 
-## Random Forest
-<p><img src="https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg"/></p>
+## Random Forests Clustering
+<p><img src="https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg"/> *[source](https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg)* </p>
+
+Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set. [Source: Wikipedia](https://en.wikipedia.org/wiki/Random_forest)
+
+
+
 [scikit - random forest classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
 ``` python
@@ -57,7 +74,7 @@ score=clf.score(X[:-500],y[:-500])
 print("score=",score)
 ```
 <p> <img src="data/scikitpy3.png" />
-Output:
+
 > score= 0.858
 
 ``` python
@@ -66,11 +83,13 @@ plt.show();
 score=clf.score(X[:500],y[:500])
 print("score=",score)
 ```
-<p> <img src="data/scikitpy42.png" />
-Output:
+
+<p><img src="data/scikitpy42.png" />
+
 > score= 0.766
 
 ### Bagging (bootstrap aggregating)
+
 ### Boosting 
 
 
@@ -80,6 +99,7 @@ Gradient boosting is a machine learning technique for regression and classificat
 
 [scikit - Gradient Boosting Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)
 
+> ** To-Do: add sample codes here **
 
 ## Convolutional neuro network (CNN)
 <p><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg"/></p>
