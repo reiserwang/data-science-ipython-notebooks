@@ -143,7 +143,7 @@ all_sample_title = 'Accuracy Score: {0}'.format(score)
 plt.title(all_sample_title, size = 15);
 ```
 
-<p><img src="images/Seaborn.png" />
+<p><img src="images/seaborn.png" />
 
 #### Matplotlib
 
