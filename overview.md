@@ -83,6 +83,95 @@ plt.show()
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
 
 
+### Confusion Matrix
+
+In the field of machine learning and specifically the problem of statistical classification, a confusion matrix, also known as an error matrix,is a specific table layout that allows visualization of the performance of an algorithm, typically a supervised learning one (in unsupervised learning it is usually called a matching matrix). Each row of the matrix represents the instances in a predicted class while each column represents the instances in an actual class (or vice versa).The name stems from the fact that it makes it easy to see if the system is confusing two classes (i.e. commonly mislabeling one as another).
+
+1. true positive (TP) eqv. with hit
+2. true negative (TN) eqv. with correct rejection
+3. false positive (FP) eqv. with false alarm, Type I error
+4. false negative (FN) eqv. with miss, Type II error
+
+*[Source: Wikipedia](https://en.wikipedia.org/wiki/Confusion_matrix)*
+
+ There are two python packages (**Seaborn** and **Matplotlib**) for making confusion matrices.
+
+``` python
+'''
+Sample code from https://towardsdatascience.com/logistic-regression-using-python-sklearn-numpy-mnist-handwriting-recognition-matplotlib-a6b31e2b166a
+'''
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn import metrics
+
+x_train, x_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.25, random_state=0)
+'''Make a model isntance'''
+logisticRegr = LogisticRegression()
+
+'''Traning the model on the data and storing information learned from data'''
+logisticRegr.fit(x_train, y_train)
+
+'''Predict labels for the new data'''
+predictions = logisticRegr.predict(x_test)
+
+cm = metrics.confusion_matrix(y_test, predictions)
+print(cm)
+```
+> Output: <br/>
+ [[37  0  0  0  0  0  0  0  0  0] <br/>
+ [ 0 39  0  0  0  0  2  0  2  0]<br/>
+ [ 0  0 41  3  0  0  0  0  0  0]<br/>
+ [ 0  0  1 43  0  0  0  0  0  1]<br/>
+ [ 0  0  0  0 38  0  0  0  0  0]<br/>
+ [ 0  1  0  0  0 47  0  0  0  0]<br/>
+ [ 0  0  0  0  0  0 52  0  0  0]<br/>
+ [ 0  1  0  1  1  0  0 45  0  0]<br/>
+ [ 0  3  1  0  0  0  0  0 43  1]<br/>
+ [ 0  0  0  1  0  1  0  0  1 44]]<br/>
+
+#### Seaborn
+
+``` python
+'''
+Seaborn
+'''
+plt.figure(figsize=(9,9))
+sns.heatmap(cm, annot=True, fmt=".3f", linewidths=.5, square = True, cmap = 'Blues_r');
+plt.ylabel('Actual label');
+plt.xlabel('Predicted label');
+all_sample_title = 'Accuracy Score: {0}'.format(score)
+plt.title(all_sample_title, size = 15);
+```
+
+<p><img src="images/Seaborn.png" />
+
+#### Matplotlib
+
+```python
+'''
+Matplotlib
+'''
+plt.figure(figsize=(9,9))
+plt.imshow(cm, interpolation='nearest', cmap='Pastel1')
+plt.title('Confusion matrix', size = 15)
+plt.colorbar()
+tick_marks = np.arange(10)
+plt.xticks(tick_marks, ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], rotation=45, size = 10)
+plt.yticks(tick_marks, ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], size = 10)
+plt.tight_layout()
+plt.ylabel('Actual label', size = 15)
+plt.xlabel('Predicted label', size = 15)
+width, height = cm.shape
+for x in range(width):
+    for y in range(height):
+        plt.annotate(str(cm[x][y]), xy=(y, x),horizontalalignment='center', verticalalignment='center')
+    
+plt.show()
+
+```
+
+<p><img src="images/Matplotlib_confusion_matrix.png" /
+
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
 ## K-Means Clustering
@@ -175,6 +264,9 @@ plt.ylabel("score")
 plt.xlabel("training set size %") 
 plt.title(r'Random Forest Classfication Score')
 ```
+
+
+
 
 <p><img src="images/scikitpy4.png" />
 
