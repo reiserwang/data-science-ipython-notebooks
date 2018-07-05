@@ -12,11 +12,74 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 
 # Fundamentals on Machine Leanring
 
+## The Model Approach
+1. Import the model to use.
+2. Training the model on the data and storing information learned from data.
+3. Predict lables for the new data
+4. Measuring model performance
+
 ## Logistic Regression
 <p>In statistics, the logistic model (or logit model) is a statistical model that is usually taken to apply to a binary dependent variable. In regression analysis, logistic regression or logit regression is estimating the parameters of a logistic model. More formally, a logistic model is one where the log-odds of the probability of an event is a linear combination of independent or predictor variables. The two possible dependent variable values are often labelled as "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. The binary logistic regression model can be generalized to more than two levels of the dependent variable: categorical outputs with more than two values are modelled by multinomial logistic regression, and if the multiple categories are ordered, by ordinal logistic regression, for example the proportional odds ordinal logistic model. 
 <p>Logistic regression is used in various fields, including machine learning, most medical fields, and social sciences.
 
 *[Souce: Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression)*
+
+### Showing Built-In Digits Datasets
+```python
+from sklearn.datasets import load_digits
+digits = load_digits()
+import numpy as np 
+import matplotlib.pyplot as plt
+plt.figure(figsize=(20,4))
+for index, (image, label) in enumerate(zip(digits.data[0:5], digits.target[0:5])):
+ plt.subplot(1, 5, index + 1)
+ plt.imshow(np.reshape(image, (8,8)), cmap=plt.cm.gray)
+ plt.title('Training: %i\n' % label, fontsize = 20)
+plt.show()
+
+```
+### Spliting Data into Training and Test Sets
+```python
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.25, random_state=0)
+```
+
+### Modeling Pattern
+```python
+'''Import the model to use'''
+from sklearn.linear_model import LogisticRegression
+
+'''Make a model isntance'''
+logisticRegr = LogisticRegression()
+
+'''Traning the model on the data and storing information learned from data'''
+logisticRegr.fit(x_train, y_train)
+
+'''Predict labels for the new data'''
+predictions = logisticRegr.predict(x_test)
+
+'''Measuring Model Performance'''
+score = logisticRegr.score(x_test, y_test)
+print(score)
+```
+> 0.953333333333
+
+```
+score_set={}
+for trainsize in range (1,100,1):
+    x_train, x_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=(100-trainsize)/100, random_state=0)
+    logisticRegr.fit(x_train,y_train)
+    score_set[trainsize]=score = logisticRegr.score(x_test, y_test)
+    
+plt.plot(score_set.keys(),score_set.values())
+
+plt.ylabel("score")
+plt.xlabel("training set size %") 
+plt.title(r'logisticRegr Score')
+plt.show()
+```
+<p> <img src="images/scikitpy5.png" />
+
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
 
 
@@ -39,7 +102,7 @@ y_pred = k_means.predict(X)
 plt.scatter(X_reduced[:, 0], X_reduced[:, 1], c=y_pred,
            cmap='rainbow');
 
-plt.show();
+plt.show()
 ```
 
 ``` python
@@ -57,8 +120,7 @@ from sklearn.cluster import KMeans
 est = KMeans(4)  # 4 clusters
 est.fit(X)
 y_kmeans = est.predict(X)
-plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');
-plt.show();
+plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');plt.show()
 ```
 
 <p> <img src="images/scikitpy2.png" />
@@ -92,15 +154,30 @@ print("score=",score)
 > score= 0.858
 
 ``` python
-visualize_tree(clf, X[-100:], y[-100:], boundaries=False)
-plt.show();
-score=clf.score(X[:500],y[:500])
-print("score=",score)
+from sklearn.tree import DecisionTreeClassifier
+import numpy as np
+
+'''
+http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+
+'''
+from sklearn.model_selection import train_test_split
+score_set={}
+for testsize in range (1,100,1):
+    clf = DecisionTreeClassifier()
+    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=testsize/100, random_state=0)
+    clf.fit(x_train,y_train)
+    score_set[testsize]=score = clf.score(x_test, y_test)
+    
+plt.plot(score_set.keys(),score_set.values())
+
+plt.ylabel("score")
+plt.xlabel("training set size %") 
+plt.title(r'Random Forest Classfication Score')
 ```
 
 <p><img src="images/scikitpy4.png" />
 
-> score= 0.766
 
 ### Bagging (bootstrap aggregating)
 
