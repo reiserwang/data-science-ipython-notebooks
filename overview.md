@@ -355,7 +355,12 @@ print (mean_squared_error(y_test, est.predict(X_test)))
 * (+)  Auto differentiation - easy multi-GPU/multi-node
 * (+) Active on Github. Lot's of new APIs
 > [Tensorflow Tutorials](README.md#tensor-flow-tutorials)
-> [Tensorflow Playground](htttp://playground.tensorflow.org)
+
+>  [Tensorflow Playground](htttp://playground.tensorflow.org)
+
+ >[Image Recognition](https://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
+
+> [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
 
 ## 2. Theano
 ## 3. Keras
