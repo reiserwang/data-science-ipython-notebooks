@@ -385,20 +385,28 @@ print (mean_squared_error(y_test, est.predict(X_test)))
 
 ## Conclusions
 * You're a PhD student on DL --> **TensorFlow**, **Theano**, **Torch**
-* You awant to use DL only to get deatures --> **Keras**, **Caffe**
+* You awant to use DL only to get features --> **Keras**, **Caffe**
 * You work in industry --> **TensorFlow**, **Caffe**
 * You want to give pracrice works to your students --> **Keras**, **Caffe**
-* You're curuous about deep learning --> **Caffe**
+* You're curious about deep learning --> **Caffe**
 * You don't even know python --> **Keras**, **Torch**
 
 ## Applications
-* **Computer Vision** - distill information from images ot video, face recognition, content moderator, emotion detection, etc.
+
 
 
 
 ## References
+
+### Frameworks
 * [Deep learning framework](https://project.inria.fr/deeplearning/files/2016/05/DLFrameworks.pdf), Vucky K, Stephane L., et al.
 * [NVIDIA Deep Learning](https://developer.nvidia.com/deep-learning)
 * [Microsoft Cognittive Toolkit](https://www.microsoft.com/en-us/cognitive-toolkit/)
 * [Deep Learning on AWS](https://aws.amazon.com/tw/deep-learning/)
 
+### Applications
+* **Computer Vision** - distill information from images ot video, face recognition, content moderator, emotion detection, etc.
+
+### Business Application
+* [6 Examples of AI in Business Intelligence Applications](https://www.techemergence.com/ai-in-business-intelligence-applications/)
+* [Machine Learning in Finance – Present and Future Applications](https://www.techemergence.com/machine-learning-in-finance/)
