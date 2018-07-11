@@ -391,7 +391,7 @@ print (mean_squared_error(y_test, est.predict(X_test)))
 * You're curious about deep learning --> **Caffe**
 * You don't even know python --> **Keras**, **Torch**
 
-## Applications
+## Oooray! You may now deep dive into [specific sections](https://github.com/reiserwang/data-science-ipython-notebooks/blob/master/README.md).
 
 
 
