@@ -406,6 +406,14 @@ print (mean_squared_error(y_test, est.predict(X_test)))
 
 ### Applications
 * **Computer Vision** - distill information from images ot video, face recognition, content moderator, emotion detection, etc.
+* **Natural Language Processing (NLP)** - concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data. Challenges in natural language processing frequently involve speech recognition, natural language understanding, and natural language generation.
+    * [Natural Laguage Toolkit](http://www.nltk.org)
+    * [gensim](http://radimrehurek.com/gensim)
+
+* **Network Analysis** - this is interesting becuase it's not just intended to "computer network", it could applies perfectly to [social science](https://cambridge-intelligence.com/keylines-faqs-social-network-analysis/) (e.g. my Linkedin connection efficiency, or Facebook connection analysis) or online advertisements (e.g. casting advertisement to a group of people in network, and analyze the efficiency and catelyst effects).  
+    * [NetworkX](http://networkx.github.io)
+    * [Gephi](http://gephi.github.io)
+
 
 ### Business Application
 * [6 Examples of AI in Business Intelligence Applications](https://www.techemergence.com/ai-in-business-intelligence-applications/)
