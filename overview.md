@@ -1,4 +1,4 @@
-# Aritificial Intelligence, Machine Learning, and Deep Learning
+# Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science
 
 Reiser Wang 
 
@@ -10,6 +10,9 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 *[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)*
 
 # Preface
+
+*Artificial intelligence can ‘evolve’ to solve problems.*
+
 This is a quick introduction to [Data Science IPyone Notebook]( https://github.com/donnemartin/data-science-ipython-notebooks) by @tuanavu @donnemartin at Github that provides comprehensive materials to most of state-of-art tool sets in topics of deep learning. Before jumping into details, this is a quick summary and overview for those who are new to AI, machines learning, and deep learning (with simple Python-based code snippets to help explain those topics... but you don'y really need to be a Python expert). Tihs material is also for my speech to MBA student seminiar in spring 2018 helping them looking deeper into the emerging technology (or _buzzwords_). I casted a question to those MBA students: _"As computer scientists are more interested in the problems they are familiar with (e.g. video and iamge) in machine learning, what are the problems in business or social science domain that those deep learning technology may be helpful?"_.  
 
 That would be very intneresting (and more practical ) problems to solve. And remember - AI/ML is about solving a problem in new way tht people didn't think of. If it succeeded human (like AlphaGo), it casts lights to we human beings to think about the problem from a new perspective - instead of the scary Hollywood movies.
@@ -335,7 +338,8 @@ print (mean_squared_error(y_test, est.predict(X_test)))
 
 > ** To-Do: add sample codes here **
 
-## Convolutional neuro network (CNN)
+# Neuro Network
+
 <p align="center"><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg"/></p>
 
 * Types of Neural Networks
@@ -344,7 +348,14 @@ print (mean_squared_error(y_test, est.predict(X_test)))
 
 * [Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/convolutional-networks/)
 
-## RNN (Recurrent Neural Network)
+## Convolutional neuro network (CNN)
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png"/>
+*Source: Wikimedia*
+
+
+
+
+## RNN (Recurrent Neuro Network)
 
 # Deep Learning Frameworks
 
@@ -418,3 +429,11 @@ print (mean_squared_error(y_test, est.predict(X_test)))
 ### Business Application
 * [6 Examples of AI in Business Intelligence Applications](https://www.techemergence.com/ai-in-business-intelligence-applications/)
 * [Machine Learning in Finance – Present and Future Applications](https://www.techemergence.com/machine-learning-in-finance/)
+* [Notes from the AI frontier: Applications and value of deep learning](https://www.mckinsey.com/featured-insights/artificial-intelligence/notes-from-the-ai-frontier-applications-and-value-of-deep-learning?cid=other-eml-ttn-mip-mck-oth-1806&hlkid=d94b55c44cfb4258b7dc49f328629182&hctky=2823580&hdpid=81ba10a7-367d-45eb-96ab-f35ebad887ec)
+
+
+### Others
+* [Google DeepMind's AlphaGo: How it works](https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/)
+<p img src="https://1.bp.blogspot.com/-b0FdTQ5Jeng/VwTeKVEuQxI/AAAAAAAAAGE/ZPAwqoT3EYU639YXhprEl-oRHKeg3xd1w/s1600/AlphaGoNetworksOverviewWithGoBoard.jpg"/>
+
+[Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)
