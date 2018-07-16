@@ -38,59 +38,7 @@ That would be very intneresting (and more practical ) problems to solve. And rem
 *[Souce: Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression)*
 
 ### Showing Built-In Digits Datasets
-```python
-from sklearn.datasets import load_digits
-digits = load_digits()
-import numpy as np 
-import matplotlib.pyplot as plt
-plt.figure(figsize=(20,4))
-for index, (image, label) in enumerate(zip(digits.data[0:5], digits.target[0:5])):
- plt.subplot(1, 5, index + 1)
- plt.imshow(np.reshape(image, (8,8)), cmap=plt.cm.gray)
- plt.title('Training: %i\n' % label, fontsize = 20)
-plt.show()
 
-```
-### Spliting Data into Training and Test Sets
-```python
-from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.25, random_state=0)
-```
-
-### Modeling Pattern
-```python
-'''Import the model to use'''
-from sklearn.linear_model import LogisticRegression
-
-'''Make a model isntance'''
-logisticRegr = LogisticRegression()
-
-'''Traning the model on the data and storing information learned from data'''
-logisticRegr.fit(x_train, y_train)
-
-'''Predict labels for the new data'''
-predictions = logisticRegr.predict(x_test)
-
-'''Measuring Model Performance'''
-score = logisticRegr.score(x_test, y_test)
-print(score)
-```
-> 0.953333333333
-
-```
-score_set={}
-for trainsize in range (1,100,1):
-    x_train, x_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=(100-trainsize)/100, random_state=0)
-    logisticRegr.fit(x_train,y_train)
-    score_set[trainsize]=score = logisticRegr.score(x_test, y_test)
-    
-plt.plot(score_set.keys(),score_set.values())
-
-plt.ylabel("score")
-plt.xlabel("training set size %") 
-plt.title(r'logisticRegr Score')
-plt.show()
-```
 <p> <img src="images/scikitpy5.png" />
 
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
@@ -109,83 +57,19 @@ In the field of machine learning and specifically the problem of statistical cla
 
  There are two python packages (**Seaborn** and **Matplotlib**) for making confusion matrices.
 
-``` python
-'''
-Sample code from https://towardsdatascience.com/logistic-regression-using-python-sklearn-numpy-mnist-handwriting-recognition-matplotlib-a6b31e2b166a
-'''
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn import metrics
-
-x_train, x_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.25, random_state=0)
-'''Make a model isntance'''
-logisticRegr = LogisticRegression()
-
-'''Traning the model on the data and storing information learned from data'''
-logisticRegr.fit(x_train, y_train)
-
-'''Predict labels for the new data'''
-predictions = logisticRegr.predict(x_test)
-
-cm = metrics.confusion_matrix(y_test, predictions)
-print(cm)
-```
-> Output: <br/>
- [[37  0  0  0  0  0  0  0  0  0] <br/>
- [ 0 39  0  0  0  0  2  0  2  0]<br/>
- [ 0  0 41  3  0  0  0  0  0  0]<br/>
- [ 0  0  1 43  0  0  0  0  0  1]<br/>
- [ 0  0  0  0 38  0  0  0  0  0]<br/>
- [ 0  1  0  0  0 47  0  0  0  0]<br/>
- [ 0  0  0  0  0  0 52  0  0  0]<br/>
- [ 0  1  0  1  1  0  0 45  0  0]<br/>
- [ 0  3  1  0  0  0  0  0 43  1]<br/>
- [ 0  0  0  1  0  1  0  0  1 44]]<br/>
 
 #### Seaborn
 
-``` python
-'''
-Seaborn
-'''
-plt.figure(figsize=(9,9))
-sns.heatmap(cm, annot=True, fmt=".3f", linewidths=.5, square = True, cmap = 'Blues_r');
-plt.ylabel('Actual label');
-plt.xlabel('Predicted label');
-all_sample_title = 'Accuracy Score: {0}'.format(score)
-plt.title(all_sample_title, size = 15);
-```
 
 <p><img src="images/seaborn.png" />
 
 #### Matplotlib
 
-```python
-'''
-Matplotlib
-'''
-plt.figure(figsize=(9,9))
-plt.imshow(cm, interpolation='nearest', cmap='Pastel1')
-plt.title('Confusion matrix', size = 15)
-plt.colorbar()
-tick_marks = np.arange(10)
-plt.xticks(tick_marks, ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], rotation=45, size = 10)
-plt.yticks(tick_marks, ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], size = 10)
-plt.tight_layout()
-plt.ylabel('Actual label', size = 15)
-plt.xlabel('Predicted label', size = 15)
-width, height = cm.shape
-for x in range(width):
-    for y in range(height):
-        plt.annotate(str(cm[x][y]), xy=(y, x),horizontalalignment='center', verticalalignment='center')
-    
-plt.show()
-
-```
-
 <p><img src="images/Matplotlib_confusion_matrix.png" /
 
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+
+### [Lab 1 - Logistic Regression, Confusion Matrix, Seaborn/Maplotlib](/lab/Lab%201%20-%20Logistic%20Regression.ipynb)
 
 ## K-Means Clustering
 k-means clustering is a method of vector quantization, originally from signal processing, that is popular for cluster analysis in data mining. k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells.
@@ -277,9 +161,6 @@ plt.ylabel("score")
 plt.xlabel("training set size %") 
 plt.title(r'Random Forest Classfication Score')
 ```
-
-
-
 
 <p><img src="images/scikitpy4.png" />
 
@@ -383,7 +264,7 @@ Artificial neural networks whose connections between neurons include loops, well
 * (+) Active on Github. Lot's of new APIs
 
 > [Setup Tensorflow](https://www.tensorflow.org/install/)
-> Intall Acnaonda
+> Intall [Anaconda](https://www.anaconda.com/download/) with Python (Python 3.6 recommended)
 > conda update conda
 > conda update anaconda
 > conda create -n tensorflow python=3 anaconda
@@ -441,14 +322,10 @@ Installing collected packages: absl-py, astor, grpcio, gast, markdown, protobuf,
 >>> print(sess.run(hello))
 b'Hello, TensorFlow!'
 ```
-
-
 > [Tensorflow Tutorials](README.md#tensor-flow-tutorials)
-
->  [Tensorflow Playground](htttp://playground.tensorflow.org)
-
- >[Image Recognition](https://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
-
+> [Tensorflow Playground](htttp://playground.tensorflow.org)
+> [Tensorflow Hub](https://www.tensorflow.org/hub/) - Library for reusable machine learning modules
+> >[Image Recognition](https://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
 > [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
 
 ## 2. Theano
