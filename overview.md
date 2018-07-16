@@ -328,6 +328,21 @@ b'Hello, TensorFlow!'
 > >[Image Recognition](https://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
 > [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
 
+###  Distributed TensorFlow
+https://www.tensorflow.org/deploy/distributed
+
+
+### TensorFlow.js
+https://js.tensorflow.org/
+A JavaScript library for training and deploying ML models in the browser and on Node.js
+
+
+### TensorFlow Lite
+https://www.tensorflow.org/mobile/tflite/
+TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded devices. It enables on-device machine learning inference with low latency and a small binary size. TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.
+
+
+
 ## 2. Theano
 ## 3. Keras
 * (+) Easy-to-use Python library that wraps Theano and Tensorflow.
