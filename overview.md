@@ -119,51 +119,11 @@ Random frests or random decision forests are an ensemble learning method for cla
 
 *[Source: Wikipedia](https://en.wikipedia.org/wiki/Random_forest)*
 
-
-
 [scikit - random forest classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-
-``` python
-from sklearn.tree import DecisionTreeClassifier
-import numpy as np
-
-clf = DecisionTreeClassifier()
-
-plt.figure()
-visualize_tree(clf, X[:100], y[:100], boundaries=False)
-plt.figure()
-score=clf.score(X[:-500],y[:-500])
-print("score=",score)
-```
-<p> <img src="images/scikitpy3.png" />
-
-> score= 0.858
-
-``` python
-from sklearn.tree import DecisionTreeClassifier
-import numpy as np
-
-'''
-http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
-
-'''
-from sklearn.model_selection import train_test_split
-score_set={}
-for testsize in range (1,100,1):
-    clf = DecisionTreeClassifier()
-    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=testsize/100, random_state=0)
-    clf.fit(x_train,y_train)
-    score_set[testsize]=score = clf.score(x_test, y_test)
-    
-plt.plot(score_set.keys(),score_set.values())
-
-plt.ylabel("score")
-plt.xlabel("training set size %") 
-plt.title(r'Random Forest Classfication Score')
-```
 
 <p><img src="images/scikitpy4.png" />
 
+### [Lab 2 - K-Means and Random Forest](/lab/Lab%202%20-%20K-Means%20and%20Random%20Forest.ipynb)
 
 ### Bagging (bootstrap aggregating)
 
@@ -179,57 +139,13 @@ The overall GBM parameters can be divided into 3 categories:
 2. Boosting Parameters: These affect the boosting operation in the model.
 3. Miscellaneous Parameters: Other parameters for overall functioning.
 
-
-```python
-
 ## Gradient Boosting Classification
-'''
-http://scikit-learn.org/stable/modules/ensemble.html
-'''
 
 
-from sklearn.datasets import make_hastie_10_2
-from sklearn.ensemble import GradientBoostingClassifier
-
-X, y = make_hastie_10_2(random_state=0)
-X_train, X_test = X[:2000], X[2000:]
-y_train, y_test = y[:2000], y[2000:]
-
-clf = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0).fit(X_train, y_train)
-clf.score(X_test, y_test)
-```
-
->0.91300000000000003
-
-```python
-## Gradient Boosting Regression
-import numpy as np
-from sklearn.metrics import mean_squared_error
-from sklearn.datasets import make_friedman1
-from sklearn.ensemble import GradientBoostingRegressor
-
-X, y = make_friedman1(n_samples=1200, random_state=0, noise=1.0)
-X_train, X_test = X[:200], X[200:]
-y_train, y_test = y[:200], y[200:]
-est = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=1, random_state=0, loss='ls').fit(X_train, y_train)
-print (mean_squared_error(y_test, est.predict(X_test))) 
-```
-
-``` bash
->>> import tensorflow as tf
->>> hello = tf.constant('Hello, TensorFlow!')
->>> sess = tf.Session()
-2018-07-15 08:41:32.201462: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
->>> print(sess.run(hello))
-b'Hello, TensorFlow!'
-```
-
->5.00915485996
-
+### [Lab - Gradient Boosting](/lab/Gradient%20Boosting.ipynb)
 
 [scikit - Gradient Boosting Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)
 
-> ** To-Do: add sample codes here **
 
 # Neuro Network
 
@@ -268,65 +184,20 @@ Artificial neural networks whose connections between neurons include loops, well
 > conda update conda
 > conda update anaconda
 > conda create -n tensorflow python=3 anaconda
-> source activate tensorflow
+> activate tensorflow
 > python install tensorflow
 http://darren1231.pixnet.net/blog/post/341911221-tensorflow_windows_setup
 
-```bash
-pip install tensorflow
-Collecting tensorflow
-  Downloading https://files.pythonhosted.org/packages/e7/88/417f18ca7eed5ba9bebd51650d04a4af929f96c10a10fbb3302196f8d098/tensorflow-1.9.0-cp36-cp36m-win_amd64.whl (37.1MB)
-    100% |████████████████████████████████| 37.1MB 424kB/s
-Collecting absl-py>=0.1.6 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/57/8d/6664518f9b6ced0aa41cf50b989740909261d4c212557400c48e5cda0804/absl-py-0.2.2.tar.gz (82kB)
-    100% |████████████████████████████████| 92kB 1.3MB/s
-Requirement already satisfied: six>=1.10.0 in c:\programdata\anaconda3\lib\site-packages (from tensorflow)
-Collecting astor>=0.6.0 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/35/6b/11530768cac581a12952a2aad00e1526b89d242d0b9f59534ef6e6a1752f/astor-0.7.1-py2.py3-none-any.whl
-Requirement already satisfied: numpy>=1.13.3 in c:\programdata\anaconda3\lib\site-packages (from tensorflow)
-Collecting grpcio>=1.8.6 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/d5/c6/15728549704f9c03db7179b7f99303b91b7703e18a50f5e7b47e59b289ea/grpcio-1.13.0-cp36-cp36m-win_amd64.whl (1.4MB)
-    100% |████████████████████████████████| 1.4MB 1.4MB/s
-Requirement already satisfied: setuptools<=39.1.0 in c:\programdata\anaconda3\lib\site-packages (from tensorflow)
-Requirement already satisfied: wheel>=0.26 in c:\programdata\anaconda3\lib\site-packages (from tensorflow)
-Collecting gast>=0.2.0 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/5c/78/ff794fcae2ce8aa6323e789d1f8b3b7765f601e7702726f430e814822b96/gast-0.2.0.tar.gz
-Collecting tensorboard<1.10.0,>=1.9.0 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/9e/1f/3da43860db614e294a034e42d4be5c8f7f0d2c75dc1c428c541116d8cdab/tensorboard-1.9.0-py3-none-any.whl (3.3MB)
-    100% |████████████████████████████████| 3.3MB 2.0MB/s
-Collecting termcolor>=1.1.0 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
-Collecting protobuf>=3.4.0 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/75/7a/0dba607e50b97f6a89fa3f96e23bf56922fa59d748238b30507bfe361bbc/protobuf-3.6.0-cp36-cp36m-win_amd64.whl (1.1MB)
-    100% |████████████████████████████████| 1.1MB 867kB/s
-Collecting markdown>=2.6.8 (from tensorboard<1.10.0,>=1.9.0->tensorflow)
-  Downloading https://files.pythonhosted.org/packages/6d/7d/488b90f470b96531a3f5788cf12a93332f543dbab13c423a5e7ce96a0493/Markdown-2.6.11-py2.py3-none-any.whl (78kB)
-    100% |████████████████████████████████| 81kB 469kB/s
-Requirement already satisfied: werkzeug>=0.11.10 in c:\programdata\anaconda3\lib\site-packages (from tensorboard<1.10.0,>=1.9.0->tensorflow)
-Building wheels for collected packages: absl-py, gast, termcolor
-  Running setup.py bdist_wheel for absl-py ... done
-  Stored in directory: C:\Users\rewang\AppData\Local\pip\Cache\wheels\a0\f8\e9\1933dbb3447ea6ef57062fd5461cb118deb8c2ed074e8344bf
-  Running setup.py bdist_wheel for gast ... done
-  Stored in directory: C:\Users\rewang\AppData\Local\pip\Cache\wheels\9a\1f\0e\3cde98113222b853e98fc0a8e9924480a3e25f1b4008cedb4f
-  Running setup.py bdist_wheel for termcolor ... done
-  Stored in directory: C:\Users\rewang\AppData\Local\pip\Cache\wheels\7c\06\54\bc84598ba1daf8f970247f550b175aaaee85f68b4b0c5ab2c6
-Successfully built absl-py gast termcolor
-Installing collected packages: absl-py, astor, grpcio, gast, markdown, protobuf, tensorboard, termcolor, tensorflow
-```
+### [Lab 3 - Tensorflow Setup](/lab/Lab%203%20-%20Tensorflow%20Setup.ipynb)
 
-``` bash
->>> import tensorflow as tf
->>> hello = tf.constant('Hello, TensorFlow!')
->>> sess = tf.Session()
-2018-07-15 08:41:32.201462: I T:\src\github\tensorflow\tensorflow\core\platform\cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
->>> print(sess.run(hello))
-b'Hello, TensorFlow!'
-```
 > [Tensorflow Tutorials](README.md#tensor-flow-tutorials)
 > [Tensorflow Playground](htttp://playground.tensorflow.org)
 > [Tensorflow Hub](https://www.tensorflow.org/hub/) - Library for reusable machine learning modules
-> >[Image Recognition](https://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
+> >[Image Recognition](piphttps://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
 > [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
+
+### [Lab 4 - Tensorflow Hub - using machine learning moules](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
+
 
 ## 2. Theano
 ## 3. Keras
