@@ -9,7 +9,48 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 
 *[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)*
 
-# Preface
+# Table of Contents
+- [Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science](#aritificial-intelligence-machine-learning-and-deep-learning-from-data-science)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Fundamentals on Machine Leanring](#fundamentals-on-machine-leanring)
+    - [The Model Approach](#the-model-approach)
+    - [Logistic Regression](#logistic-regression)
+        - [Showing Built-In Digits Datasets](#showing-built-in-digits-datasets)
+        - [Confusion Matrix](#confusion-matrix)
+            - [Seaborn](#seaborn)
+            - [Matplotlib](#matplotlib)
+        - [Lab 1 - Logistic Regression, Confusion Matrix, Seaborn/Maplotlib](#lab-1---logistic-regression-confusion-matrix-seabornmaplotlib)
+    - [K-Means Clustering](#k-means-clustering)
+    - [Random Forests Clustering](#random-forests-clustering)
+        - [Lab 2 - K-Means and Random Forest](#lab-2---k-means-and-random-forest)
+        - [Bagging (bootstrap aggregating)](#bagging-bootstrap-aggregating)
+    - [Gradient Boosted Machines (GBM)](#gradient-boosted-machines-gbm)
+    - [Gradient Boosting Classification](#gradient-boosting-classification)
+        - [Lab - Gradient Boosting](#lab---gradient-boosting)
+- [Neural Networks](#neural-networks)
+    - [Feed Forward Neural Networks](#feed-forward-neural-networks)
+    - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
+        - [TensorFlow.js](#tensorflowjs)
+        - [TensorFlow Lite](#tensorflow-lite)
+    - [RNN (Recurrent Neuro Networks)](#rnn-recurrent-neuro-networks)
+- [Deep Learning Frameworks](#deep-learning-frameworks)
+    - [1. TensorFlow](#1-tensorflow)
+        - [Lab 3 - Tensorflow Setup](#lab-3---tensorflow-setup)
+        - [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](#lab-4---tensorflow-hub---using-machine-learning-moules-to-learn-flowers)
+    - [2. Theano](#2-theano)
+    - [3. Keras](#3-keras)
+    - [4. Torch](#4-torch)
+    - [5. Caffe](#5-caffe)
+    - [Conclusions](#conclusions)
+    - [Oooray! You may now deep dive into specific sections.](#oooray-you-may-now-deep-dive-into-specific-sections)
+    - [References](#references)
+        - [Frameworks](#frameworks)
+        - [Applications](#applications)
+        - [Business Application](#business-application)
+        - [Others](#others)
+
+# Introduction
 
 *Artificial intelligence can ‘evolve’ to solve problems.*
 
@@ -21,6 +62,8 @@ That would be very intneresting (and more practical ) problems to solve. And rem
 
 <p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Artificial%20Intelligence/Notes%20from%20the%20AI%20frontier%20Applications%20and%20value%20of%20deep%20learning/SVGZ-AI-Impact-Ex1.ashx"/>
 ~Source: McKinsey&Company~
+
+
 
 
 # Fundamentals on Machine Leanring
@@ -147,7 +190,7 @@ The overall GBM parameters can be divided into 3 categories:
 [scikit - Gradient Boosting Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)
 
 
-# Neuro Network
+# Neural Networks
 
 <p align="center"><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg"/></p>
 
@@ -163,11 +206,11 @@ The overall GBM parameters can be divided into 3 categories:
 ## Convolutional Neural Networks (CNN)
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png"/>
 *Source: Wikimedia*
-Artificial neural networks in which the connections between neural layers are inspired by the organization of the animal visual cortex, the portion of the brain that processes images, well suited for perceptual tasks.
 
-### [Lab 4 - Tensorflow Hub - using machine learning moules](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
-=======
-###  Distributed TensorFlow
+Artificial neural networks in which the connections between neural layers are inspired by the organization of the animal visual cortex, the portion of the brain that processes images, well suited for perceptual tasks, such as image and voice recognition. For most of the computer vision work, CNN is the best suited neural network. It extracts features of the image through convolutions, which start at a low level (edges) and the more you advance through the network, the higher level the features (shapes, faces etc.). It also uses shift-invariance through pooling, which allow features to be detected whether ever they are in the image. 
+
+> Note: CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流函數, sometimes Sigmoid instead), and **Pooling** layers.
+ 
 https://www.tensorflow.org/deploy/distributed
 
 
@@ -180,9 +223,6 @@ A JavaScript library for training and deploying ML models in the browser and on 
 https://www.tensorflow.org/mobile/tflite/
 TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded devices. It enables on-device machine learning inference with low latency and a small binary size. TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.
 
-
-
-
 ## RNN (Recurrent Neuro Networks)
 Artificial neural networks whose connections between neurons include loops, well-suited for processing sequences of inputs. In November 2016, Oxford University researchers reported that a system based on recurrent neural networks (and convolutional neural networks) had achieved 95 percent accuracy in reading lips, outperforming experienced human lip readers, who tested at 52 percent accuracy.
 
@@ -192,7 +232,8 @@ Artificial neural networks whose connections between neurons include loops, well
 * Low-level core (C++/CUDA)
 * Simple Python API to define he computational graph
 * High-level API's (TF-Learn, TF-Slim, Keras)
-* (+)  Auto differentiation - easy multi-GPU/multi-node
+* Focus on netual networks, as implementations of [K-means Clustering](https://github.com/tensorflow/tensorflow/blob/32bd3d024f33e920a67a1081bc0ae0048350fdee/tensorflow/contrib/factorization/python/ops/kmeans.py), [Random Forests](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/random_forest.py), [Support Vector Machines](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/svm.py), [Gaussian Mixture Model Clustering](https://github.com/tensorflow/tensorflow/blob/32bd3d024f33e920a67a1081bc0ae0048350fdee/tensorflow/contrib/factorization/python/ops/gmm.py), [Linear](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/linear.py)/[Logistic Regression](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/linear.py) are poping up.
+* (+) Auto differentiation - easy multi-GPU/multi-node
 * (+) Active on Github. Lot's of new APIs
 
 > [Setup Tensorflow](https://www.tensorflow.org/install/)
@@ -221,12 +262,23 @@ To install the GPU version of TensorFlow, enter the following command:
 
 ## 2. Theano
 ## 3. Keras
+https://keras.io
+
+Keras is a high-level neural networks API, written in Python and capable of running on top of [TensorFlow](https://github.com/tensorflow/tensorflow), [CNTK](https://github.com/tensorflow/tensorflow), or [Theano](https://github.com/tensorflow/tensorflow). It was developed with a focus on enabling fast experimentation. *Being able to go from idea to result with the least possible delay is key to doing good research*.
+
 * (+) Easy-to-use Python library that wraps Theano and Tensorflow.
 * (+) Libraries, tools and Google official support
 * (-) Less flexible and less projects (as of current than caffe).
 * (-) Multi-GPU not working 100%
 * (-) No RBM
 > [Keras tutorials](README.md#keras-tutorials)
+> <p>There are some interesting [examples in Github](https://github.com/keras-team/keras/tree/master/examples):
+> In the examples folder, you will also find example models for real datasets:
+> <li> CIFAR10 small images classification: Convolutional Neural Network (CNN) with realtime data augmentation. 
+> <li> IMDB movie review sentiment classification: LSTM over sequences of words. 
+> <li>Reuters newswires topic classification: Multilayer Perceptron (MLP).
+> <li>MNIST handwritten digits classification: MLP & CNN
+> <li>Character-level text generation with LSTM
 
 ## 4. Torch
 ## 5. Caffe
