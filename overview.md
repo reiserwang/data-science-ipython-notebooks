@@ -196,7 +196,23 @@ http://darren1231.pixnet.net/blog/post/341911221-tensorflow_windows_setup
 > >[Image Recognition](piphttps://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
 > [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
 
+<<<<<<< HEAD
 ### [Lab 4 - Tensorflow Hub - using machine learning moules](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
+=======
+###  Distributed TensorFlow
+https://www.tensorflow.org/deploy/distributed
+
+
+### TensorFlow.js
+https://js.tensorflow.org/
+A JavaScript library for training and deploying ML models in the browser and on Node.js
+
+
+### TensorFlow Lite
+https://www.tensorflow.org/mobile/tflite/
+TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded devices. It enables on-device machine learning inference with low latency and a small binary size. TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.
+
+>>>>>>> 3252c8044f9581e05a304b4d771dfbd285518f20
 
 
 ## 2. Theano
