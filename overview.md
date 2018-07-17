@@ -31,7 +31,7 @@ That would be very intneresting (and more practical ) problems to solve. And rem
 3. Predict lables for the new data
 4. Measuring model performance
 
-## Logistic Regression
+##  Logistic Regression
 <p>In statistics, the logistic model (or logit model) is a statistical model that is usually taken to apply to a binary dependent variable. In regression analysis, logistic regression or logit regression is estimating the parameters of a logistic model. More formally, a logistic model is one where the log-odds of the probability of an event is a linear combination of independent or predictor variables. The two possible dependent variable values are often labelled as "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. The binary logistic regression model can be generalized to more than two levels of the dependent variable: categorical outputs with more than two values are modelled by multinomial logistic regression, and if the multiple categories are ordered, by ordinal logistic regression, for example the proportional odds ordinal logistic model. 
 <p>Logistic regression is used in various fields, including machine learning, most medical fields, and social sciences.
 
@@ -165,6 +165,22 @@ The overall GBM parameters can be divided into 3 categories:
 *Source: Wikimedia*
 Artificial neural networks in which the connections between neural layers are inspired by the organization of the animal visual cortex, the portion of the brain that processes images, well suited for perceptual tasks.
 
+### [Lab 4 - Tensorflow Hub - using machine learning moules](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
+=======
+###  Distributed TensorFlow
+https://www.tensorflow.org/deploy/distributed
+
+
+### TensorFlow.js
+https://js.tensorflow.org/
+A JavaScript library for training and deploying ML models in the browser and on Node.js
+
+
+### TensorFlow Lite
+https://www.tensorflow.org/mobile/tflite/
+TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded devices. It enables on-device machine learning inference with low latency and a small binary size. TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.
+
+
 
 
 ## RNN (Recurrent Neuro Networks)
@@ -185,8 +201,12 @@ Artificial neural networks whose connections between neurons include loops, well
 > conda update anaconda
 > conda create -n tensorflow python=3 anaconda
 > activate tensorflow
-> python install tensorflow
-http://darren1231.pixnet.net/blog/post/341911221-tensorflow_windows_setup
+> pip install --upgrade tensorflow
+
+To install the GPU version of TensorFlow, enter the following command:
+> pip install --upgrade tensorflow-gpu
+
+> In Anaconda, you may use conda to create a virtual environment. However, within Anaconda, we recommend installing TensorFlow with the pip install command, not with the conda install command.
 
 ### [Lab 3 - Tensorflow Setup](/lab/Lab%203%20-%20Tensorflow%20Setup.ipynb)
 
@@ -196,23 +216,7 @@ http://darren1231.pixnet.net/blog/post/341911221-tensorflow_windows_setup
 > >[Image Recognition](piphttps://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
 > [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
 
-<<<<<<< HEAD
-### [Lab 4 - Tensorflow Hub - using machine learning moules](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
-=======
-###  Distributed TensorFlow
-https://www.tensorflow.org/deploy/distributed
-
-
-### TensorFlow.js
-https://js.tensorflow.org/
-A JavaScript library for training and deploying ML models in the browser and on Node.js
-
-
-### TensorFlow Lite
-https://www.tensorflow.org/mobile/tflite/
-TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded devices. It enables on-device machine learning inference with low latency and a small binary size. TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.
-
->>>>>>> 3252c8044f9581e05a304b4d771dfbd285518f20
+### [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
 
 
 ## 2. Theano
