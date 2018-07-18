@@ -40,10 +40,10 @@ https://github.com/reiserwang/data-science-ipython-notebooks
     - [1. TensorFlow](#1-tensorflow)
         - [Lab 3 - Tensorflow Setup](#lab-3---tensorflow-setup)
         - [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](#lab-4---tensorflow-hub---using-machine-learning-moules-to-learn-flowers)
-    - [2. Theano](#2-theano)
-    - [3. Keras](#3-keras)
-    - [4. Torch](#4-torch)
-    - [5. Caffe](#5-caffe)
+    - [2. Keras](#2-keras)
+    - [3. Caffe](#3-caffe)
+    - [4. Theano](#4-theano)
+    - [5. Torch](#5-torch)
     - [Conclusions](#conclusions)
     - [Oooray! You may now deep dive into specific sections.](#oooray-you-may-now-deep-dive-into-specific-sections)
     - [References](#references)
@@ -260,17 +260,16 @@ To install the GPU version of TensorFlow, enter the following command:
 
 ### [Lab 3 - Tensorflow Setup](/lab/Lab%203%20-%20Tensorflow%20Setup.ipynb)
 
-> [Tensorflow Tutorials](README.md#tensor-flow-tutorials)
-> [Tensorflow Playground](htttp://playground.tensorflow.org)
-> [Tensorflow Hub](https://www.tensorflow.org/hub/) - Library for reusable machine learning modules
-> >[Image Recognition](piphttps://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
-> [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
+*  [Tensorflow Tutorials](README.md#tensor-flow-tutorials)
+*  [Tensorflow Playground](htttp://playground.tensorflow.org)
+*  [Tensorflow Hub](https://www.tensorflow.org/hub/) - Library for reusable machine learning modules
+*  [Image Recognition](piphttps://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
+*  [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
 
 ### [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
 
 
-## 2. Theano
-## 3. Keras
+## 2. Keras
 https://keras.io
 
 Keras is a high-level neural networks API, written in Python and capable of running on top of [TensorFlow](https://github.com/tensorflow/tensorflow), [CNTK](https://github.com/tensorflow/tensorflow), or [Theano](https://github.com/tensorflow/tensorflow). It was developed with a focus on enabling fast experimentation. *Being able to go from idea to result with the least possible delay is key to doing good research*.
@@ -289,8 +288,13 @@ Keras is a high-level neural networks API, written in Python and capable of runn
 > <li>MNIST handwritten digits classification: MLP & CNN
 > <li>Character-level text generation with LSTM
 
-## 4. Torch
-## 5. Caffe
+## 3. Caffe
+
+http://caffe.berkeleyvision.org/
+
+CAFFE (Convolutional Architecture for Fast Feature Embedding) is a deep learning framework, originally developed at UC Berkeley. It is written in C++, with a Python interface.
+
+
 * Applications in machine learning, vision, speech, and multimedia.
 * Good for feed-forward networks and image processing.
 * Widely acceptable from research communities.
@@ -300,6 +304,22 @@ Keras is a high-level neural networks API, written in Python and capable of runn
 * (-) No auto-differentiation
 * Not good for RNN, mainly CNN
 * (-) Cubersome for big networks (GooLeNet, ResNet)
+
+## 4. Theano
+
+http://deeplearning.net/software/theano/
+
+Theano is a numerical computation library for Python.In Theano, computations are expressed using a NumPy-esque syntax and compiled to run efficiently on either CPU or GPU architectures
+
+## 5. Torch
+
+http://torch.ch/
+
+Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.
+
+
+
+
 
 ## Conclusions
 
