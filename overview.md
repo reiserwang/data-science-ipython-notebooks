@@ -201,7 +201,8 @@ The overall GBM parameters can be divided into 3 categories:
 
 # Neural Networks
 
-<p align="center"><img src="http://api.ning.com/files/0gGC4ZQuxjPQZ*7CfZBPKZM7mP-Zfs7mU4MeRsxVnjfhumeFIbr5M1CtJcMmdXjoWl22QlmarTJ2BgMF2ha*2N9jkqfeHUZQ/DeepConvolutionalNeuralNetworks.jpg"/></p>
+<p align="center"><img src="https://cdn-images-1.medium.com/max/2000/1*gccuMDV8fXjcvz1RSk4kgQ.png"/></p>
+[source](https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5)
 
 * Types of Neural Networks
 <p><img src="https://pbs.twimg.com/media/DNk_8dDW0AAJaWr.jpg" /></p>
