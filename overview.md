@@ -322,7 +322,9 @@ Keras is a high-level neural networks API, written in Python and capable of runn
 * [NVIDIA Deep Learning](https://developer.nvidia.com/deep-learning)
 * [Microsoft Cognitive Toolkit](https://www.microsoft.com/en-us/cognitive-toolkit/)
 * [Microsoft Azure Machine Learning Studio](https://studio.azureml.net/)
-<p><img stc="/images/MLStudio.png" />
+<p><img stc="images/MLStudio.png" />
+
+
 * [Deep Learning on AWS](https://aws.amazon.com/tw/deep-learning/)
 
 ### Applications
