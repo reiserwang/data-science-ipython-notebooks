@@ -15,13 +15,15 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 - [Introduction](#introduction)
 - [Fundamentals on Machine Leanring](#fundamentals-on-machine-leanring)
     - [The Model Approach](#the-model-approach)
-    - [Logistic Regression](#logistic-regression)
-        - [Showing Built-In Digits Datasets](#showing-built-in-digits-datasets)
-        - [Confusion Matrix](#confusion-matrix)
+    - [Training and Validation](#training-and-validation)
+    - [Confusion Matrix](#confusion-matrix)
             - [Seaborn](#seaborn)
             - [Matplotlib](#matplotlib)
         - [Lab 1 - Logistic Regression, Confusion Matrix, Seaborn/Maplotlib](#lab-1---logistic-regression-confusion-matrix-seabornmaplotlib)
     - [K-Means Clustering](#k-means-clustering)
+    - [Logistic Regression](#logistic-regression)
+        - [Showing Built-In Digits Datasets](#showing-built-in-digits-datasets)
+- [](#)
     - [Random Forests Clustering](#random-forests-clustering)
         - [Lab 2 - K-Means and Random Forest](#lab-2---k-means-and-random-forest)
         - [Bagging (bootstrap aggregating)](#bagging-bootstrap-aggregating)
@@ -74,20 +76,12 @@ That would be very intneresting (and more practical ) problems to solve. And rem
 3. Predict lables for the new data
 4. Measuring model performance
 
-##  Logistic Regression
-<p>In statistics, the logistic model (or logit model) is a statistical model that is usually taken to apply to a binary dependent variable. In regression analysis, logistic regression or logit regression is estimating the parameters of a logistic model. More formally, a logistic model is one where the log-odds of the probability of an event is a linear combination of independent or predictor variables. The two possible dependent variable values are often labelled as "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. The binary logistic regression model can be generalized to more than two levels of the dependent variable: categorical outputs with more than two values are modelled by multinomial logistic regression, and if the multiple categories are ordered, by ordinal logistic regression, for example the proportional odds ordinal logistic model. 
-<p>Logistic regression is used in various fields, including machine learning, most medical fields, and social sciences.
+##  Training and Validation
 
-*[Souce: Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression)*
+* The training accuracy shows what percent of the images used in the current training batch were labeled with the correct class. 
+* The validation accuracy is the precision on a randomly-selected group of images from a different set. The key difference is that the training accuracy is based on images that the network has been able to learn from so the network can overfit to the noise in the training data. A true measure of the performance of the network is to measure its performance on a data set not contained in the training data -- this is measured by the validation accuracy. 
 
-### Showing Built-In Digits Datasets
-
-<p> <img src="images/scikitpy5.png" />
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
-
-
-### Confusion Matrix
+## Confusion Matrix
 
 In the field of machine learning and specifically the problem of statistical classification, a confusion matrix, also known as an error matrix,is a specific table layout that allows visualization of the performance of an algorithm, typically a supervised learning one (in unsupervised learning it is usually called a matching matrix). Each row of the matrix represents the instances in a predicted class while each column represents the instances in an actual class (or vice versa).The name stems from the fact that it makes it easy to see if the system is confusing two classes (i.e. commonly mislabeling one as another).
 
@@ -154,6 +148,21 @@ plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');plt.show()
 
 <p> <img src="images/scikitpy2.png" />
 
+
+##  Logistic Regression
+<p>In statistics, the logistic model (or logit model) is a statistical model that is usually taken to apply to a binary dependent variable. In regression analysis, logistic regression or logit regression is estimating the parameters of a logistic model. More formally, a logistic model is one where the log-odds of the probability of an event is a linear combination of independent or predictor variables. The two possible dependent variable values are often labelled as "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. The binary logistic regression model can be generalized to more than two levels of the dependent variable: categorical outputs with more than two values are modelled by multinomial logistic regression, and if the multiple categories are ordered, by ordinal logistic regression, for example the proportional odds ordinal logistic model. 
+<p>Logistic regression is used in various fields, including machine learning, most medical fields, and social sciences.
+
+*[Souce: Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression)*
+
+### Showing Built-In Digits Datasets
+
+<p> <img src="images/scikitpy5.png" />
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
+
+
+#
 
 ## Random Forests Clustering
 <p><img src="https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg"/> *[source](https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg)* </p>
@@ -293,28 +302,30 @@ Keras is a high-level neural networks API, written in Python and capable of runn
 * (-) Cubersome for big networks (GooLeNet, ResNet)
 
 ## Conclusions
-* You're a PhD student on DL --> **TensorFlow**, **Theano**, **Torch**
-* You awant to use DL only to get features --> **Keras**, **Caffe**
-* You work in industry --> **TensorFlow**, **Caffe**
-* You want to give pracrice works to your students --> **Keras**, **Caffe**
-* You're curious about deep learning --> **Caffe**
-* You don't even know python --> **Keras**, **Torch**
+
+| |Tensorflow | Keras   | Caffe |Theano | Torch  
+|--|--| --| --| --| --|
+| Deep Leanring PhD Student  | ✔ |  |  | ✔  |✔ |
+| Use Deep Learning for features  |  | ✔ | ✔ |   |   |
+| Work in industry | ✔ | ✔ | ✔ |   |   |
+| Give assignments to students/interns |   | ✔ | ✔ |   |   |
+| Just curious about deep learning |   |   | ✔ |   |   |
+|*"I don't know Python at all"* |   |  ✔ |  |   |  ✔   |
+
 
 ## Oooray! You may now deep dive into [specific sections](https://github.com/reiserwang/data-science-ipython-notebooks/blob/master/README.md).
-
-
-
 
 ## References
 
 ### Frameworks
 * [Deep learning framework](https://project.inria.fr/deeplearning/files/2016/05/DLFrameworks.pdf), Vucky K, Stephane L., et al.
 * [NVIDIA Deep Learning](https://developer.nvidia.com/deep-learning)
-* [Microsoft Cognittive Toolkit](https://www.microsoft.com/en-us/cognitive-toolkit/)
+* [Microsoft Cognitive Toolkit](https://www.microsoft.com/en-us/cognitive-toolkit/)
+* [Microsoft Azure Machine Learning Studio](https://studio.azureml.net/)
+<p><img stc="/images/MLStudio.png" />
 * [Deep Learning on AWS](https://aws.amazon.com/tw/deep-learning/)
 
 ### Applications
-
 <p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Artificial%20Intelligence/Notes%20from%20the%20AI%20frontier%20Applications%20and%20value%20of%20deep%20learning/SVGZ-AI-Impact-Ex2-Expanded.ashx"/>
 
 <p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Artificial%20Intelligence/Notes%20from%20the%20AI%20frontier%20Applications%20and%20value%20of%20deep%20learning/SVGZ-AI-Impact-Ex3-V2.ashx"/>
