@@ -37,6 +37,7 @@ https://github.com/reiserwang/data-science-ipython-notebooks
         - [TensorFlow Lite](#tensorflow-lite)
     - [RNN (Recurrent Neuro Networks)](#rnn-recurrent-neuro-networks)
     - [LSTM (Long Short-Term Memory)](#lstm-long-short-term-memory)
+- [Reinforcement Learning](#reinforcement-learning)
 - [Deep Learning Frameworks](#deep-learning-frameworks)
     - [1. TensorFlow](#1-tensorflow)
         - [Setup Tensorflow](#setup-tensorflow)
@@ -52,7 +53,7 @@ https://github.com/reiserwang/data-science-ipython-notebooks
         - [Frameworks](#frameworks)
         - [Applications](#applications)
         - [Business Application](#business-application)
-        - [Others](#others)
+        - [Other Interesting Topcis](#other-interesting-topcis)
 
 # Introduction
 
@@ -247,6 +248,16 @@ The expression long short-term refers to the fact that LSTM is a model for the s
 
 * [LTSM Model in TensorFlow](https://www.tensorflow.org/tutorials/sequences/recurrent)
 
+# Reinforcement Learning
+Reinforcement learning (RL) is an area of machine learning, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. The problem, due to its generality, is studied in many other disciplines, such as game theory, control theory, operations research, information theory, simulation-based optimization, multi-agent systems, swarm intelligence, statistics and genetic algorithms. In the operations research and control literature, reinforcement learning is called approximate dynamic programming, or neuro-dynamic programming. The problems of interest in reinforcement learning have also been studied in the theory of optimal control, which is concerned mostly with the existence and characterization of optimal solutions, and algorithms for their exact computation, and less with learning or approximation, particularly in the absence of a mathematical model of the environment. In economics and game theory, reinforcement learning may be used to explain how equilibrium may arise under bounded rationality.
+
+In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
+
+```
+Source: Wikipedia
+```
+
+
 # Deep Learning Frameworks
 
 ## 1. TensorFlow
@@ -381,8 +392,10 @@ Torch is a scientific computing framework with wide support for machine learning
 * [Notes from the AI frontier: Applications and value of deep learning](https://www.mckinsey.com/featured-insights/artificial-intelligence/notes-from-the-ai-frontier-applications-and-value-of-deep-learning?cid=other-eml-ttn-mip-mck-oth-1806&hlkid=d94b55c44cfb4258b7dc49f328629182&hctky=2823580&hdpid=81ba10a7-367d-45eb-96ab-f35ebad887ec)
 
 
-### Others
+### Other Interesting Topcis
 * [Google DeepMind's AlphaGo: How it works](https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/)
 <p img src="https://1.bp.blogspot.com/-b0FdTQ5Jeng/VwTeKVEuQxI/AAAAAAAAAGE/ZPAwqoT3EYU639YXhprEl-oRHKeg3xd1w/s1600/AlphaGoNetworksOverviewWithGoBoard.jpg"/>
 
-```[Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)```
+> [Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)
+
+*[Dog Breed Classification using Deep Learning: hands-on approach](https://towardsdatascience.com/dog-breed-classification-hands-on-approach-b5e4f88c333e)
