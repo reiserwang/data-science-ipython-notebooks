@@ -7,7 +7,7 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 
 <p><img src= "http://scikit-learn.org/dev/_static/ml_map.png" /></p>
 
-*[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)*
+[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)
 
 # Table of Contents
 - [Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science](#aritificial-intelligence-machine-learning-and-deep-learning-from-data-science)
@@ -283,6 +283,7 @@ To install the GPU version of TensorFlow, enter the following command:
 
 ### [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
 
+<p><img src="images/validationAccuracy.png" />
 
 ## 2. Keras
 https://keras.io
