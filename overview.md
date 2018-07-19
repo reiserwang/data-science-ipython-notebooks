@@ -303,10 +303,21 @@ To install the GPU version of TensorFlow, enter the following command:
 *  [Tensorflow Hub](https://www.tensorflow.org/hub/) - Library for reusable machine learning modules
 *  [Image Recognition](piphttps://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
 *  [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
+*  [TensorBoard](https://www.tensorflow.org/tutorials/sequences/audio_recognition)
+
+A good way to visualize how the training is progressing is using Tensorboard. By default, the script saves out events to /tmp/retrain_logs, and you can load these by running:
+
+```
+tensorboard --logdir /tmp/retrain_logs
+```
+
+Then navigate to http://localhost:6006 in your browser, and you'll see charts and graphs showing your models progress.
 
 ### [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
 
 <p><img src="images/validationAccuracy.png" />
+
+<p><img src="images/TensorBoard.png"/>
 
 ## 2. Keras
 https://keras.io
