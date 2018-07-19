@@ -13,7 +13,11 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 - [Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science](#aritificial-intelligence-machine-learning-and-deep-learning-from-data-science)
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-- [Fundamentals on Machine Leanring](#fundamentals-on-machine-leanring)
+- [Fundamentals of Data Science](#fundamentals-of-data-science)
+    - [Monte Carlo method](#monte-carlo-method)
+    - [Markov Decision Processes (MDP)](#markov-decision-processes-mdp)
+        - [Lab - Gradient Boosting](#lab---gradient-boosting)
+- [Fundamentals of Machine Leanring](#fundamentals-of-machine-leanring)
     - [The Model Approach](#the-model-approach)
     - [Training and Validation](#training-and-validation)
     - [Confusion Matrix](#confusion-matrix)
@@ -69,9 +73,17 @@ That would be very intneresting (and more practical ) problems to solve. And rem
 ~Source: McKinsey&Company~
 
 
+# Fundamentals of Data Science
+
+## Monte Carlo method
+
+## Markov Decision Processes (MDP)
+https://github.com/oyamad/mdp
 
 
-# Fundamentals on Machine Leanring
+### [Lab - Gradient Boosting](/lab/Data%20Science%20Fundamentals%20in%20Python.ipynb)
+
+# Fundamentals of Machine Leanring
 
 ## The Model Approach
 1. Import the model to use.
@@ -398,4 +410,4 @@ Torch is a scientific computing framework with wide support for machine learning
 
 > [Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)
 
-*[Dog Breed Classification using Deep Learning: hands-on approach](https://towardsdatascience.com/dog-breed-classification-hands-on-approach-b5e4f88c333e)
+* [Dog Breed Classification using Deep Learning: hands-on approach](https://towardsdatascience.com/dog-breed-classification-hands-on-approach-b5e4f88c333e)
