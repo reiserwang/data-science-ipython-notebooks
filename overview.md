@@ -36,8 +36,10 @@ https://github.com/reiserwang/data-science-ipython-notebooks
         - [TensorFlow.js](#tensorflowjs)
         - [TensorFlow Lite](#tensorflow-lite)
     - [RNN (Recurrent Neuro Networks)](#rnn-recurrent-neuro-networks)
+    - [LSTM (Long Short-Term Memory)](#lstm-long-short-term-memory)
 - [Deep Learning Frameworks](#deep-learning-frameworks)
     - [1. TensorFlow](#1-tensorflow)
+        - [Setup Tensorflow](#setup-tensorflow)
         - [Lab 3 - Tensorflow Setup](#lab-3---tensorflow-setup)
         - [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](#lab-4---tensorflow-hub---using-machine-learning-moules-to-learn-flowers)
     - [2. Keras](#2-keras)
@@ -102,7 +104,7 @@ In the field of machine learning and specifically the problem of statistical cla
 
 #### Matplotlib
 
-<p><img src="images/Matplotlib_confusion_matrix.png" /
+<p><img src="images/Matplotlib_confusion_matrix.png" />
 
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
@@ -214,7 +216,8 @@ The overall GBM parameters can be divided into 3 categories:
 
 ## Convolutional Neural Networks (CNN)
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png"/>
-*Source: Wikimedia*
+
+```Source: Wikimedia```
 
 Artificial neural networks in which the connections between neural layers are inspired by the organization of the animal visual cortex, the portion of the brain that processes images, well suited for perceptual tasks, such as image and voice recognition. For most of the computer vision work, CNN is the best suited neural network. It extracts features of the image through convolutions, which start at a low level (edges) and the more you advance through the network, the higher level the features (shapes, faces etc.). It also uses shift-invariance through pooling, which allow features to be detected whether ever they are in the image. 
 
@@ -235,6 +238,15 @@ TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded d
 ## RNN (Recurrent Neuro Networks)
 Artificial neural networks whose connections between neurons include loops, well-suited for processing sequences of inputs. In November 2016, Oxford University researchers reported that a system based on recurrent neural networks (and convolutional neural networks) had achieved 95 percent accuracy in reading lips, outperforming experienced human lip readers, who tested at 52 percent accuracy.
 
+## LSTM (Long Short-Term Memory)
+Long short-term memory (LSTM) units (or blocks) are a building unit for layers of a recurrent neural network (RNN). A RNN composed of LSTM units is often called an LSTM network. A common LSTM unit is composed of a cell, an input gate, an output gate and a forget gate. The cell is responsible for "remembering" values over arbitrary time intervals; hence the word "memory" in LSTM. Each of the three gates can be thought of as a "conventional" artificial neuron, as in a multi-layer (or feedforward) neural network: that is, they compute an activation (using an activation function) of a weighted sum. Intuitively, they can be thought as regulators of the flow of values that goes through the connections of the LSTM; hence the denotation "gate". There are connections between these gates and the cell.
+
+The expression long short-term refers to the fact that LSTM is a model for the short-term memory which can last for a long period of time. An LSTM is well-suited to classify, process and predict time series given time lags of unknown size and duration between important events. LSTMs were developed to deal with the exploding and vanishing gradient problem when training traditional RNNs. Relative insensitivity to gap length gives an advantage to LSTM over alternative RNNs, hidden [Markov models](https://en.wikipedia.org/wiki/Markov_model) and other sequence learning methods in numerous applications.
+
+```[Source: Wikipedia](https://en.wikipedia.org/wiki/Long_short-term_memory)```
+
+* [LTSM Model in TensorFlow](https://www.tensorflow.org/tutorials/sequences/recurrent)
+
 # Deep Learning Frameworks
 
 ## 1. TensorFlow
@@ -242,19 +254,22 @@ Artificial neural networks whose connections between neurons include loops, well
 * Simple Python API to define he computational graph
 * High-level API's (TF-Learn, TF-Slim, Keras)
 * Focus on netual networks, as implementations of [K-means Clustering](https://github.com/tensorflow/tensorflow/blob/32bd3d024f33e920a67a1081bc0ae0048350fdee/tensorflow/contrib/factorization/python/ops/kmeans.py), [Random Forests](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/random_forest.py), [Support Vector Machines](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/svm.py), [Gaussian Mixture Model Clustering](https://github.com/tensorflow/tensorflow/blob/32bd3d024f33e920a67a1081bc0ae0048350fdee/tensorflow/contrib/factorization/python/ops/gmm.py), [Linear](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/linear.py)/[Logistic Regression](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/linear.py) are poping up.
+* [TensorFlow modules](https://github.com/tensorflow/hub/tree/r0.1/docs/modules)
+* 
 * (+) Auto differentiation - easy multi-GPU/multi-node
 * (+) Active on Github. Lot's of new APIs
 
-> [Setup Tensorflow](https://www.tensorflow.org/install/)
-> Intall [Anaconda](https://www.anaconda.com/download/) with Python (Python 3.6 recommended)
-> conda update conda
-> conda update anaconda
-> conda create -n tensorflow python=3 anaconda
-> activate tensorflow
-> pip install --upgrade tensorflow
+### Setup Tensorflow
+https://www.tensorflow.org/install/
+1.  Intall [Anaconda](https://www.anaconda.com/download/) with Python (Python 3.6 recommended)
+2.  conda update conda
+3.  conda update anaconda
+4.  conda create -n tensorflow python=3 anaconda
+5.  activate tensorflow
+6.  pip install --upgrade tensorflow
 
 To install the GPU version of TensorFlow, enter the following command:
-> pip install --upgrade tensorflow-gpu
+``` pip install --upgrade tensorflow-gpu ```
 
 > In Anaconda, you may use conda to create a virtual environment. However, within Anaconda, we recommend installing TensorFlow with the pip install command, not with the conda install command.
 
@@ -280,8 +295,7 @@ Keras is a high-level neural networks API, written in Python and capable of runn
 * (-) Multi-GPU not working 100%
 * (-) No RBM
 > [Keras tutorials](README.md#keras-tutorials)
-> <p>There are some interesting [examples in Github](https://github.com/keras-team/keras/tree/master/examples):
-> In the examples folder, you will also find example models for real datasets:
+> <p>There are some interesting examples in Github (https://github.com/keras-team/keras/tree/master/examples). In the examples folder, you will also find example models for real datasets:
 > <li> CIFAR10 small images classification: Convolutional Neural Network (CNN) with realtime data augmentation. 
 > <li> IMDB movie review sentiment classification: LSTM over sequences of words. 
 > <li>Reuters newswires topic classification: Multilayer Perceptron (MLP).
@@ -316,9 +330,6 @@ Theano is a numerical computation library for Python.In Theano, computations are
 http://torch.ch/
 
 Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.
-
-
-
 
 
 ## Conclusions
@@ -373,4 +384,4 @@ Torch is a scientific computing framework with wide support for machine learning
 * [Google DeepMind's AlphaGo: How it works](https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/)
 <p img src="https://1.bp.blogspot.com/-b0FdTQ5Jeng/VwTeKVEuQxI/AAAAAAAAAGE/ZPAwqoT3EYU639YXhprEl-oRHKeg3xd1w/s1600/AlphaGoNetworksOverviewWithGoBoard.jpg"/>
 
-[Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)
+```[Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)```
