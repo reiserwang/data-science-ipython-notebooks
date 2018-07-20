@@ -234,7 +234,9 @@ The overall GBM parameters can be divided into 3 categories:
 
 Artificial neural networks in which the connections between neural layers are inspired by the organization of the animal visual cortex, the portion of the brain that processes images, well suited for perceptual tasks, such as image and voice recognition. For most of the computer vision work, CNN is the best suited neural network. It extracts features of the image through convolutions, which start at a low level (edges) and the more you advance through the network, the higher level the features (shapes, faces etc.). It also uses shift-invariance through pooling, which allow features to be detected whether ever they are in the image. 
 
-> Note: CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流函數, sometimes Sigmoid instead), and **Pooling** layers.
+CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流函數, sometimes Sigmoid instead), and **Pooling** layers.
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*ZCjPUFrB6eHPRi4eyP6aaA.gif"/>
  
 https://www.tensorflow.org/deploy/distributed
 
@@ -420,5 +422,7 @@ Torch is a scientific computing framework with wide support for machine learning
 <p img src="https://1.bp.blogspot.com/-b0FdTQ5Jeng/VwTeKVEuQxI/AAAAAAAAAGE/ZPAwqoT3EYU639YXhprEl-oRHKeg3xd1w/s1600/AlphaGoNetworksOverviewWithGoBoard.jpg"/>
 
 > [Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)
+
+* [facenet - Facial Recognition Using TensorFlow](https://github.com/davidsandberg/facenet)
 
 * [Dog Breed Classification using Deep Learning: hands-on approach](https://towardsdatascience.com/dog-breed-classification-hands-on-approach-b5e4f88c333e)
