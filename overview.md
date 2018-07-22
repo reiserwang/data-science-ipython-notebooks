@@ -7,13 +7,17 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 
 <p><img src= "http://scikit-learn.org/dev/_static/ml_map.png" /></p>
 
-*[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)*
+[image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)
 
 # Table of Contents
 - [Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science](#aritificial-intelligence-machine-learning-and-deep-learning-from-data-science)
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-- [Fundamentals on Machine Leanring](#fundamentals-on-machine-leanring)
+- [Fundamentals of Data Science](#fundamentals-of-data-science)
+    - [Monte Carlo method](#monte-carlo-method)
+    - [Markov Decision Processes (MDP)](#markov-decision-processes-mdp)
+        - [Lab - Gradient Boosting](#lab---gradient-boosting)
+- [Fundamentals of Machine Leanring](#fundamentals-of-machine-leanring)
     - [The Model Approach](#the-model-approach)
     - [Training and Validation](#training-and-validation)
     - [Confusion Matrix](#confusion-matrix)
@@ -36,8 +40,12 @@ https://github.com/reiserwang/data-science-ipython-notebooks
         - [TensorFlow.js](#tensorflowjs)
         - [TensorFlow Lite](#tensorflow-lite)
     - [RNN (Recurrent Neuro Networks)](#rnn-recurrent-neuro-networks)
+    - [LSTM (Long Short-Term Memory)](#lstm-long-short-term-memory)
+- [Reinforcement Learning](#reinforcement-learning)
+- [Transfer Learning](#transfer-learning)
 - [Deep Learning Frameworks](#deep-learning-frameworks)
     - [1. TensorFlow](#1-tensorflow)
+        - [Setup Tensorflow](#setup-tensorflow)
         - [Lab 3 - Tensorflow Setup](#lab-3---tensorflow-setup)
         - [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](#lab-4---tensorflow-hub---using-machine-learning-moules-to-learn-flowers)
     - [2. Keras](#2-keras)
@@ -50,7 +58,7 @@ https://github.com/reiserwang/data-science-ipython-notebooks
         - [Frameworks](#frameworks)
         - [Applications](#applications)
         - [Business Application](#business-application)
-        - [Others](#others)
+        - [Other Interesting Topcis](#other-interesting-topcis)
 
 # Introduction
 
@@ -66,9 +74,17 @@ That would be very intneresting (and more practical ) problems to solve. And rem
 ~Source: McKinsey&Company~
 
 
+# Fundamentals of Data Science
+
+## Monte Carlo method
+
+## Markov Decision Processes (MDP)
+https://github.com/oyamad/mdp
 
 
-# Fundamentals on Machine Leanring
+### [Lab - Gradient Boosting](/lab/Data%20Science%20Fundamentals%20in%20Python.ipynb)
+
+# Fundamentals of Machine Leanring
 
 ## The Model Approach
 1. Import the model to use.
@@ -102,7 +118,7 @@ In the field of machine learning and specifically the problem of statistical cla
 
 #### Matplotlib
 
-<p><img src="images/Matplotlib_confusion_matrix.png" /
+<p><img src="images/Matplotlib_confusion_matrix.png" />
 
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
@@ -215,11 +231,14 @@ The overall GBM parameters can be divided into 3 categories:
 
 ## Convolutional Neural Networks (CNN)
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png"/>
-*Source: Wikimedia*
+
+```Source: Wikimedia```
 
 Artificial neural networks in which the connections between neural layers are inspired by the organization of the animal visual cortex, the portion of the brain that processes images, well suited for perceptual tasks, such as image and voice recognition. For most of the computer vision work, CNN is the best suited neural network. It extracts features of the image through convolutions, which start at a low level (edges) and the more you advance through the network, the higher level the features (shapes, faces etc.). It also uses shift-invariance through pooling, which allow features to be detected whether ever they are in the image. 
 
-> Note: CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流函數, sometimes Sigmoid instead), and **Pooling** layers.
+CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流函數, sometimes Sigmoid instead), and **Pooling** layers.
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*ZCjPUFrB6eHPRi4eyP6aaA.gif"/>
  
 https://www.tensorflow.org/deploy/distributed
 
@@ -236,6 +255,34 @@ TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded d
 ## RNN (Recurrent Neuro Networks)
 Artificial neural networks whose connections between neurons include loops, well-suited for processing sequences of inputs. In November 2016, Oxford University researchers reported that a system based on recurrent neural networks (and convolutional neural networks) had achieved 95 percent accuracy in reading lips, outperforming experienced human lip readers, who tested at 52 percent accuracy.
 
+## LSTM (Long Short-Term Memory)
+Long short-term memory (LSTM) units (or blocks) are a building unit for layers of a recurrent neural network (RNN). A RNN composed of LSTM units is often called an LSTM network. A common LSTM unit is composed of a cell, an input gate, an output gate and a forget gate. The cell is responsible for "remembering" values over arbitrary time intervals; hence the word "memory" in LSTM. Each of the three gates can be thought of as a "conventional" artificial neuron, as in a multi-layer (or feedforward) neural network: that is, they compute an activation (using an activation function) of a weighted sum. Intuitively, they can be thought as regulators of the flow of values that goes through the connections of the LSTM; hence the denotation "gate". There are connections between these gates and the cell.
+
+The expression long short-term refers to the fact that LSTM is a model for the short-term memory which can last for a long period of time. An LSTM is well-suited to classify, process and predict time series given time lags of unknown size and duration between important events. LSTMs were developed to deal with the exploding and vanishing gradient problem when training traditional RNNs. Relative insensitivity to gap length gives an advantage to LSTM over alternative RNNs, hidden [Markov models](https://en.wikipedia.org/wiki/Markov_model) and other sequence learning methods in numerous applications.
+
+```[Source: Wikipedia](https://en.wikipedia.org/wiki/Long_short-term_memory)```
+
+* [LTSM Model in TensorFlow](https://www.tensorflow.org/tutorials/sequences/recurrent)
+
+# Reinforcement Learning
+Reinforcement learning (RL) is an area of machine learning, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. The problem, due to its generality, is studied in many other disciplines, such as game theory, control theory, operations research, information theory, simulation-based optimization, multi-agent systems, swarm intelligence, statistics and genetic algorithms. In the operations research and control literature, reinforcement learning is called approximate dynamic programming, or neuro-dynamic programming. The problems of interest in reinforcement learning have also been studied in the theory of optimal control, which is concerned mostly with the existence and characterization of optimal solutions, and algorithms for their exact computation, and less with learning or approximation, particularly in the absence of a mathematical model of the environment. In economics and game theory, reinforcement learning may be used to explain how equilibrium may arise under bounded rationality.
+
+In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
+
+```
+Source: Wikipedia
+```
+#  Transfer Learning
+
+Transfer learning is a research problem in machine learning that focuses on storing knowledge gained while solving one problem and applying it to a different but related problem. For example, knowledge gained while learning to recognize cars could apply when trying to recognize trucks. This area of research bears some relation to the long history of psychological literature on transfer of learning, although formal ties between the two fields are limited.
+
+* [Domain adoption](https://en.wikipedia.org/wiki/Domain_adaptation)
+* [Multi-task learning (MTL)](https://en.wikipedia.org/wiki/Multi-task_learning)
+
+```(Source: Wikipedia)```
+
+
+
 # Deep Learning Frameworks
 
 ## 1. TensorFlow
@@ -243,19 +290,22 @@ Artificial neural networks whose connections between neurons include loops, well
 * Simple Python API to define he computational graph
 * High-level API's (TF-Learn, TF-Slim, Keras)
 * Focus on netual networks, as implementations of [K-means Clustering](https://github.com/tensorflow/tensorflow/blob/32bd3d024f33e920a67a1081bc0ae0048350fdee/tensorflow/contrib/factorization/python/ops/kmeans.py), [Random Forests](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/random_forest.py), [Support Vector Machines](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/svm.py), [Gaussian Mixture Model Clustering](https://github.com/tensorflow/tensorflow/blob/32bd3d024f33e920a67a1081bc0ae0048350fdee/tensorflow/contrib/factorization/python/ops/gmm.py), [Linear](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/linear.py)/[Logistic Regression](https://github.com/tensorflow/tensorflow/blob/v0.10.0rc0/tensorflow/contrib/learn/python/learn/estimators/linear.py) are poping up.
+* [TensorFlow modules](https://github.com/tensorflow/hub/tree/r0.1/docs/modules)
+* 
 * (+) Auto differentiation - easy multi-GPU/multi-node
 * (+) Active on Github. Lot's of new APIs
 
-> [Setup Tensorflow](https://www.tensorflow.org/install/)
-> Intall [Anaconda](https://www.anaconda.com/download/) with Python (Python 3.6 recommended)
-> conda update conda
-> conda update anaconda
-> conda create -n tensorflow python=3 anaconda
-> activate tensorflow
-> pip install --upgrade tensorflow
+### Setup Tensorflow
+https://www.tensorflow.org/install/
+1.  Intall [Anaconda](https://www.anaconda.com/download/) with Python (Python 3.6 recommended)
+2.  conda update conda
+3.  conda update anaconda
+4.  conda create -n tensorflow python=3 anaconda
+5.  activate tensorflow
+6.  pip install --upgrade tensorflow
 
 To install the GPU version of TensorFlow, enter the following command:
-> pip install --upgrade tensorflow-gpu
+``` pip install --upgrade tensorflow-gpu ```
 
 > In Anaconda, you may use conda to create a virtual environment. However, within Anaconda, we recommend installing TensorFlow with the pip install command, not with the conda install command.
 
@@ -266,9 +316,21 @@ To install the GPU version of TensorFlow, enter the following command:
 *  [Tensorflow Hub](https://www.tensorflow.org/hub/) - Library for reusable machine learning modules
 *  [Image Recognition](piphttps://www.tensorflow.org/tutorials/image_recognition) and [Retrain an Image Classifier](https://www.tensorflow.org/tutorials/image_retraining)
 *  [Convolutional Neural Networks](https://www.tensorflow.org/tutorials/deep_cnn)
+*  [TensorBoard](https://www.tensorflow.org/tutorials/sequences/audio_recognition)
+
+A good way to visualize how the training is progressing is using Tensorboard. By default, the script saves out events to /tmp/retrain_logs, and you can load these by running:
+
+```
+tensorboard --logdir /tmp/retrain_logs
+```
+
+Then navigate to http://localhost:6006 in your browser, and you'll see charts and graphs showing your models progress.
 
 ### [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
 
+<p><img src="images/validationAccuracy.png" />
+
+<p><img src="images/TensorBoard.png"/>
 
 ## 2. Keras
 https://keras.io
@@ -281,8 +343,7 @@ Keras is a high-level neural networks API, written in Python and capable of runn
 * (-) Multi-GPU not working 100%
 * (-) No RBM
 > [Keras tutorials](README.md#keras-tutorials)
-> <p>There are some interesting [examples in Github](https://github.com/keras-team/keras/tree/master/examples):
-> In the examples folder, you will also find example models for real datasets:
+> <p>There are some interesting examples in Github (https://github.com/keras-team/keras/tree/master/examples). In the examples folder, you will also find example models for real datasets:
 > <li> CIFAR10 small images classification: Convolutional Neural Network (CNN) with realtime data augmentation. 
 > <li> IMDB movie review sentiment classification: LSTM over sequences of words. 
 > <li>Reuters newswires topic classification: Multilayer Perceptron (MLP).
@@ -317,9 +378,6 @@ Theano is a numerical computation library for Python.In Theano, computations are
 http://torch.ch/
 
 Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. It is easy to use and efficient, thanks to an easy and fast scripting language, LuaJIT, and an underlying C/CUDA implementation.
-
-
-
 
 
 ## Conclusions
@@ -370,8 +428,12 @@ Torch is a scientific computing framework with wide support for machine learning
 * [Notes from the AI frontier: Applications and value of deep learning](https://www.mckinsey.com/featured-insights/artificial-intelligence/notes-from-the-ai-frontier-applications-and-value-of-deep-learning?cid=other-eml-ttn-mip-mck-oth-1806&hlkid=d94b55c44cfb4258b7dc49f328629182&hctky=2823580&hdpid=81ba10a7-367d-45eb-96ab-f35ebad887ec)
 
 
-### Others
+### Other Interesting Topcis
 * [Google DeepMind's AlphaGo: How it works](https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/)
 <p img src="https://1.bp.blogspot.com/-b0FdTQ5Jeng/VwTeKVEuQxI/AAAAAAAAAGE/ZPAwqoT3EYU639YXhprEl-oRHKeg3xd1w/s1600/AlphaGoNetworksOverviewWithGoBoard.jpg"/>
 
-[Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)
+> [Source](http://deeplearningskysthelimit.blogspot.com/2016/04/part-2-alphago-under-magnifying-glass.html)
+
+* [facenet - Facial Recognition Using TensorFlow](https://github.com/davidsandberg/facenet)
+
+* [Dog Breed Classification using Deep Learning: hands-on approach](https://towardsdatascience.com/dog-breed-classification-hands-on-approach-b5e4f88c333e)
