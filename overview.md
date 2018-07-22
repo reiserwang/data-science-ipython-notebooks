@@ -317,13 +317,13 @@ Source: Wikipedia
 
 In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
 
-*[Using Machine Learning Agents Toolkit in a real game: a beginner’s guide](https://blogs.unity3d.com/2017/12/11/using-machine-learning-agents-in-a-real-game-a-beginners-guide/) - *The initial algorithm we came up with was allowing the agent to earn reward if, when not in a situation of danger, its distance from the target was decreasing. Similarly, when in a situation of danger, it would earn reward if its distance from the target was increasing (the agent was “running away”). Additionally, the algorithm was including a punishment given to the agent in case it was attacking when not allowed to.*
+*  [Using Machine Learning Agents Toolkit in a real game: a beginner’s guide](https://blogs.unity3d.com/2017/12/11/using-machine-learning-agents-in-a-real-game-a-beginners-guide/) - *The initial algorithm we came up with was allowing the agent to earn reward if, when not in a situation of danger, its distance from the target was decreasing. Similarly, when in a situation of danger, it would earn reward if its distance from the target was increasing (the agent was “running away”). Additionally, the algorithm was including a punishment given to the agent in case it was attacking when not allowed to.*
 
-*[OpenAI Gym](https://gym.openai.com/) - a toolkit for developing and comparing reinforcement learning algorithms.
+*  [OpenAI Gym](https://gym.openai.com/) - a toolkit for developing and comparing reinforcement learning algorithms.
 
-*[Intelligent Machines - A team of AI algorithms just crushed humans in a complex computer game](https://www.technologyreview.com/s/611536/a-team-of-ai-algorithms-just-crushed-expert-humans-in-a-complex-computer-game/)
+*  [Intelligent Machines - A team of AI algorithms just crushed humans in a complex computer game](https://www.technologyreview.com/s/611536/a-team-of-ai-algorithms-just-crushed-expert-humans-in-a-complex-computer-game/)
 
-*[Microsoft wants artificial intelligence to catch cheaters on Xbox Live](https://www.digitaltrends.com/computing/microsoft-patent-describes-machine-learning-cheat-detection/)
+*  [Microsoft wants artificial intelligence to catch cheaters on Xbox Live](https://www.digitaltrends.com/computing/microsoft-patent-describes-machine-learning-cheat-detection/)
 
 
 #  Transfer Learning
