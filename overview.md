@@ -42,6 +42,8 @@ https://github.com/reiserwang/data-science-ipython-notebooks
     - [RNN (Recurrent Neuro Networks)](#rnn-recurrent-neuro-networks)
     - [LSTM (Long Short-Term Memory)](#lstm-long-short-term-memory)
 - [Reinforcement Learning](#reinforcement-learning)
+    - [Q-learning](#q-learning)
+    - [Deep Q-learning (DQN)](#deep-q-learning-dqn)
 - [Transfer Learning](#transfer-learning)
 - [Deep Learning Frameworks](#deep-learning-frameworks)
     - [1. TensorFlow](#1-tensorflow)
@@ -272,6 +274,20 @@ In machine learning, the environment is typically formulated as a Markov Decisio
 ```
 Source: Wikipedia
 ```
+##  Q-learning
+
+The goal of Q-Learning is to learn a policy, which tells an agent which action to take under which circumstances. It does not require a model of the environment and can handle problems with stochastic transitions and rewards, without requiring adaptations.
+
+For any **finite Markov decision process (FMDP)**, Q-learning eventually finds an optimal policy, in the sense that the expected value of the total reward return over all successive steps, starting from the current state, is the maximum achievable. Q-learning can identify an optimal action-selection policy for any given FMDP, given infinite exploration time and an, at least partly, random policy. "Q" names the function that returns the reward used to provide the reinforcement and can be said to stand for the "quality" of an action taken in a given state.
+
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c389edfb9c4342c07a9adad55a3f554a8d2242c"/>
+
+##  Deep Q-learning (DQN)
+
+The DeepMind system used a deep convolutional neural network, with layers of tiled convolutional filters to mimic the effects of receptive fields. Reinforcement learning is unstable or divergent when a nonlinear function approximator such as a neural network is used to represent Q. This instability comes from the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and the data distribution, and the correlations between Q and the target values.
+
+The technique used experience replay, a biologically inspired mechanism that [uses a random sample of prior actions instead of the most recent action to proceed](http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/). This removes correlations in the observation sequence and smooths changes in the data distribution. [Iterative update adjusts Q towards target values that are only periodically updated, further reducing correlations with the target](http://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf).
+
 #  Transfer Learning
 
 Transfer learning is a research problem in machine learning that focuses on storing knowledge gained while solving one problem and applying it to a different but related problem. For example, knowledge gained while learning to recognize cars could apply when trying to recognize trucks. This area of research bears some relation to the long history of psychological literature on transfer of learning, although formal ties between the two fields are limited.
