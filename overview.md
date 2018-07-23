@@ -42,6 +42,8 @@ https://github.com/reiserwang/data-science-ipython-notebooks
     - [RNN (Recurrent Neuro Networks)](#rnn-recurrent-neuro-networks)
     - [LSTM (Long Short-Term Memory)](#lstm-long-short-term-memory)
 - [Reinforcement Learning](#reinforcement-learning)
+    - [Q-learning](#q-learning)
+    - [Deep Q-learning (DQN)](#deep-q-learning-dqn)
 - [Transfer Learning](#transfer-learning)
 - [Deep Learning Frameworks](#deep-learning-frameworks)
     - [1. TensorFlow](#1-tensorflow)
@@ -313,6 +315,21 @@ Reinforcement learning (RL) is an area of machine learning, concerned with how s
 ```
 Source: Wikipedia
 ```
+<<<<<<< HEAD
+##  Q-learning
+
+The goal of Q-Learning is to learn a policy, which tells an agent which action to take under which circumstances. It does not require a model of the environment and can handle problems with stochastic transitions and rewards, without requiring adaptations.
+
+For any **finite Markov decision process (FMDP)**, Q-learning eventually finds an optimal policy, in the sense that the expected value of the total reward return over all successive steps, starting from the current state, is the maximum achievable. Q-learning can identify an optimal action-selection policy for any given FMDP, given infinite exploration time and an, at least partly, random policy. "Q" names the function that returns the reward used to provide the reinforcement and can be said to stand for the "quality" of an action taken in a given state.
+
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c389edfb9c4342c07a9adad55a3f554a8d2242c"/>
+
+##  Deep Q-learning (DQN)
+
+The DeepMind system used a deep convolutional neural network, with layers of tiled convolutional filters to mimic the effects of receptive fields. Reinforcement learning is unstable or divergent when a nonlinear function approximator such as a neural network is used to represent Q. This instability comes from the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and the data distribution, and the correlations between Q and the target values.
+
+The technique used experience replay, a biologically inspired mechanism that [uses a random sample of prior actions instead of the most recent action to proceed](http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/). This removes correlations in the observation sequence and smooths changes in the data distribution. [Iterative update adjusts Q towards target values that are only periodically updated, further reducing correlations with the target](http://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf).
+=======
 
 In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
 
@@ -337,6 +354,7 @@ The technique used experience replay, a biologically inspired mechanism that [us
 
 *  [Microsoft wants artificial intelligence to catch cheaters on Xbox Live](https://www.digitaltrends.com/computing/microsoft-patent-describes-machine-learning-cheat-detection/)
 
+>>>>>>> cd8f767baf7d456661a7c2f054e55ca3316ee4fd
 
 #  Transfer Learning
 
