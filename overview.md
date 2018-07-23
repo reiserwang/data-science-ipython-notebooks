@@ -257,7 +257,11 @@ CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流�
 https://www.tensorflow.org/deploy/distributed
 
 
+<<<<<<< HEAD
 ###  AlexNet
+=======
+##  AlexNet
+>>>>>>> 0259d9241c4217b988f0718834b46b94d5812b7e
 
 This architecture was one of the first deep networks to push ImageNet Classification accuracy by a significant stride in comparison to traditional methodologies. It is composed of 5 convolutional layers followed by 3 fully connected layers.
 
@@ -335,6 +339,35 @@ For any **finite Markov decision process (FMDP)**, Q-learning eventually finds a
 The DeepMind system used a deep convolutional neural network, with layers of tiled convolutional filters to mimic the effects of receptive fields. Reinforcement learning is unstable or divergent when a nonlinear function approximator such as a neural network is used to represent Q. This instability comes from the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and the data distribution, and the correlations between Q and the target values.
 
 The technique used experience replay, a biologically inspired mechanism that [uses a random sample of prior actions instead of the most recent action to proceed](http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/). This removes correlations in the observation sequence and smooths changes in the data distribution. [Iterative update adjusts Q towards target values that are only periodically updated, further reducing correlations with the target](http://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf).
+<<<<<<< HEAD
+=======
+=======
+
+In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
+
+## 6.1. Q-learning
+The goal of Q-Learning is to learn a policy, which tells an agent which action to take under which circumstances. It does not require a model of the environment and can handle problems with stochastic transitions and rewards, without requiring adaptations.
+
+For any **finite Markov decision process (FMDP)**, Q-learning eventually finds an optimal policy, in the sense that the expected value of the total reward return over all successive steps, starting from the current state, is the maximum achievable. Q-learning can identify an optimal action-selection policy for any given FMDP, given infinite exploration time and an, at least partly, random policy. "Q" names the function that returns the reward used to provide the reinforcement and can be said to stand for the "quality" of an action taken in a given state.
+
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c389edfb9c4342c07a9adad55a3f554a8d2242c"/>
+
+## 6.2. Deep Q-learning (DQN)
+The DeepMind system used a deep convolutional neural network, with layers of tiled convolutional filters to mimic the effects of receptive fields. Reinforcement learning is unstable or divergent when a nonlinear function approximator such as a neural network is used to represent Q. This instability comes from the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and the data distribution, and the correlations between Q and the target values.
+
+The technique used experience replay, a biologically inspired mechanism that [uses a random sample of prior actions instead of the most recent action to proceed](http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/). This removes correlations in the observation sequence and smooths changes in the data distribution. [Iterative update adjusts Q towards target values that are only periodically updated, further reducing correlations with the target](http://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf).
+
+
+*  [Using Machine Learning Agents Toolkit in a real game: a beginner’s guide](https://blogs.unity3d.com/2017/12/11/using-machine-learning-agents-in-a-real-game-a-beginners-guide/) - *The initial algorithm we came up with was allowing the agent to earn reward if, when not in a situation of danger, its distance from the target was decreasing. Similarly, when in a situation of danger, it would earn reward if its distance from the target was increasing (the agent was “running away”). Additionally, the algorithm was including a punishment given to the agent in case it was attacking when not allowed to.*
+
+*  [OpenAI Gym](https://gym.openai.com/) - a toolkit for developing and comparing reinforcement learning algorithms.
+
+*  [Intelligent Machines - A team of AI algorithms just crushed humans in a complex computer game](https://www.technologyreview.com/s/611536/a-team-of-ai-algorithms-just-crushed-expert-humans-in-a-complex-computer-game/)
+
+*  [Microsoft wants artificial intelligence to catch cheaters on Xbox Live](https://www.digitaltrends.com/computing/microsoft-patent-describes-machine-learning-cheat-detection/)
+
+>>>>>>> cd8f767baf7d456661a7c2f054e55ca3316ee4fd
+>>>>>>> 0259d9241c4217b988f0718834b46b94d5812b7e
 
 #  Transfer Learning
 
