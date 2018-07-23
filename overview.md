@@ -127,6 +127,7 @@ In the field of machine learning and specifically the problem of statistical cla
 ### [Lab 1 - Logistic Regression, Confusion Matrix, Seaborn/Maplotlib](/lab/Lab%201%20-%20Logistic%20Regression.ipynb)
 
 ## K-Means Clustering
+
 k-means clustering is a method of vector quantization, originally from signal processing, that is popular for cluster analysis in data mining. k-means clustering aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster. This results in a partitioning of the data space into Voronoi cells.
 
 The problem is computationally difficult (NP-hard); however, there are efficient heuristic algorithms that are commonly employed and converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. Additionally, they both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the expectation-maximization mechanism allows clusters to have different shapes.
@@ -168,6 +169,7 @@ plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');plt.show()
 
 
 ##  Logistic Regression
+
 <p>In statistics, the logistic model (or logit model) is a statistical model that is usually taken to apply to a binary dependent variable. In regression analysis, logistic regression or logit regression is estimating the parameters of a logistic model. More formally, a logistic model is one where the log-odds of the probability of an event is a linear combination of independent or predictor variables. The two possible dependent variable values are often labelled as "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. The binary logistic regression model can be generalized to more than two levels of the dependent variable: categorical outputs with more than two values are modelled by multinomial logistic regression, and if the multiple categories are ordered, by ordinal logistic regression, for example the proportional odds ordinal logistic model. 
 <p>Logistic regression is used in various fields, including machine learning, most medical fields, and social sciences.
 
@@ -180,9 +182,8 @@ plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=20, cmap='rainbow');plt.show()
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Exam_pass_logistic_curve.jpeg"/>
 
 
-#
-
 ## Random Forests Clustering
+
 <p><img src="https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg"/> *[source](https://i2.kknews.cc/SIG=1akj8kp/s76000608p37242005r.jpg)* </p>
 
 Random frests or random decision forests are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. Random decision forests correct for decision trees' habit of overfitting to their training set. 
@@ -195,11 +196,13 @@ Random frests or random decision forests are an ensemble learning method for cla
 
 ### [Lab 2 - K-Means and Random Forest](/lab/Lab%202%20-%20K-Means%20and%20Random%20Forest.ipynb)
 
-### Bagging (bootstrap aggregating)
+
+>  **Bagging (bootstrap aggregating)** - a machine learning ensemble meta-algorithm designed to improve the stability and accuracy of machine learning algorithms used in statistical classification and regression. It also reduces variance and helps to avoid overfitting. Although it is usually applied to decision tree methods, it can be used with any type of method. Bagging is a special case of the model averaging approach. [Reference and example: Wikipedia, Ozone data](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
 
 
 ## Gradient Boosted Machines (GBM)
-Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
+
+Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiablPe loss function.
 
 > **Boosting** is a sequential technique which works on the principle of ensemble. It combines a set of weak learners and delivers improved prediction accuracy. At any instant t, the model outcomes are weighed based on the outcomes of previous instant t-1. The outcomes predicted correctly are given a lower weight and the ones miss-classified are weighted higher. This technique is followed for a classification problem while a similar technique is used for regression.
 
@@ -229,9 +232,11 @@ The overall GBM parameters can be divided into 3 categories:
 * [Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/convolutional-networks/)
 
 ## Feed Forward Neural Networks
+ 
  The simplest type of artificial neural network. In this architecture, information moves in only one direction, forward, from the input layer, through the “hidden” layers, to the output layer. There are no loops in the network. The first single-neuron network was proposed already in 1958 by AI pioneer Frank Rosenblatt. While the idea is not new, advances in computing power, training algorithms, and available data led to higher levels of performance than previously possible.
 
 ## Convolutional Neural Networks (CNN)
+
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png"/>
 
 ```Source: Wikimedia```
@@ -245,19 +250,56 @@ CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流�
 https://www.tensorflow.org/deploy/distributed
 
 
-### TensorFlow.js
-https://js.tensorflow.org/
-A JavaScript library for training and deploying ML models in the browser and on Node.js
+#  AlexNet
+
+This architecture was one of the first deep networks to push ImageNet Classification accuracy by a significant stride in comparison to traditional methodologies. It is composed of 5 convolutional layers followed by 3 fully connected layers.
+
+<p><img src="http://cv-tricks.com/wp-content/uploads/2017/03/xalexnet_small-1.png.pagespeed.ic.EZPeJF1qqb.webp"/>
+
+AlexNet, proposed by Alex Krizhevsky, uses ReLu(Rectified Linear Unit) for the non-linear part, instead of a Tanh or Sigmoid function which was the earlier standard for traditional neural networks. The advantage of the ReLu over sigmoid is that it trains much faster than the latter because the derivative of sigmoid becomes very small in the saturating region and therefore the updates to the weights almost vanish. This is called vanishing gradient problem.
+
+Another problem that this architecture solved was reducing the over-fitting by using a Dropout layer after every FC layer. Dropout layer has a probability,(p), associated with it and is applied at every neuron of the response map separately. It randomly switches off the activation with the probability p.  
 
 
-### TensorFlow Lite
-https://www.tensorflow.org/mobile/tflite/
-TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded devices. It enables on-device machine learning inference with low latency and a small binary size. TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.
+##  ResNet
+
+As residual neural networks do artificial neural network by utilizing skip connections or short-cuts to jump over some layers,  ResNets is the one that only skip over a single layer. It is the Convolutinal Neural Netwrks from Microsoft team that won ILSRVC 2015 competetiona and surpass the human performance on ImageNet dataset. 
+
+Their are some variants, such as **ResNet50**, which is a 50 layer Residual Network. 
+
+<p> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/ResNets.svg/220px-ResNets.svg.png"/>
+
+
+##  VGGNet
+
+This architecture is from VGG group, Oxford. It makes the improvement over AlexNet by replacing large kernel-sized filters(11 and 5 in the first and second convolutional layer, respectively) with multiple 3X3 kernel-sized filters one after another. With a given receptive field(the effective area size of input image on which output depends), multiple stacked smaller size kernel is better than the one with a larger size kernel because multiple non-linear layers increases the depth of the network which enables it to learn more complex features, and that too at a lower cost. *For instance, a convolutional layer with 3X3 kernel size which takes 512 channels as input and outputs 512 channels, the order of calculations is 9X512X512. *
+
+
+## GoogLeNet/Inception
+
+While VGG achieves a phenomenal accuracy on ImageNet dataset, its deployment on even the most modest sized GPUs is a problem because of huge computational requirements, both in terms of memory and time. It becomes inefficient due to large width of convolutional layers.
+
+GoogLeNet devised a module called inception module that approximates a sparse CNN with a normal dense construction. Since only a small number of neurons are effective as mentioned earlier, width/number of the convolutional filters of a particular kernel size is kept small. Also, it uses convolutions of different sizes to capture details at varied scales(5X5, 3X3, 1X1).Another salient point about the module is that it has a so-called **bottleneck layer** (1X1 convolutions in the figure). It helps in massive reduction of the computation requirement.
+
+Another change that GoogLeNet made, was to replace the fully-connected layers at the end with a simple global average pooling which averages out the channel values across the 2D feature map, after the last convolutional layer. This drastically reduces the total number of parameters. This can be understood from AlexNet, where FC layers contain approx. 90% of parameters. Use of a large network width and depth allows GoogLeNet to remove the FC layers without affecting the accuracy. It achieves 93.3% top-5 accuracy on ImageNet and is much faster than VGG.
+
+<p><img src="https://d2mxuefqeaa7sj.cloudfront.net/s_8C760A111A4204FB24FFC30E04E069BD755C4EEFD62ACBA4B54BBA2A78E13E8C_1490879611424_inception_module.png" />
+
+
+```[source](http://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/)``` ** (Highly recommend to read) **
+
+##  WReN
+
+> To-Do add contents here
+
+
 
 ## RNN (Recurrent Neuro Networks)
+
 Artificial neural networks whose connections between neurons include loops, well-suited for processing sequences of inputs. In November 2016, Oxford University researchers reported that a system based on recurrent neural networks (and convolutional neural networks) had achieved 95 percent accuracy in reading lips, outperforming experienced human lip readers, who tested at 52 percent accuracy.
 
 ## LSTM (Long Short-Term Memory)
+
 Long short-term memory (LSTM) units (or blocks) are a building unit for layers of a recurrent neural network (RNN). A RNN composed of LSTM units is often called an LSTM network. A common LSTM unit is composed of a cell, an input gate, an output gate and a forget gate. The cell is responsible for "remembering" values over arbitrary time intervals; hence the word "memory" in LSTM. Each of the three gates can be thought of as a "conventional" artificial neuron, as in a multi-layer (or feedforward) neural network: that is, they compute an activation (using an activation function) of a weighted sum. Intuitively, they can be thought as regulators of the flow of values that goes through the connections of the LSTM; hence the denotation "gate". There are connections between these gates and the cell.
 
 The expression long short-term refers to the fact that LSTM is a model for the short-term memory which can last for a long period of time. An LSTM is well-suited to classify, process and predict time series given time lags of unknown size and duration between important events. LSTMs were developed to deal with the exploding and vanishing gradient problem when training traditional RNNs. Relative insensitivity to gap length gives an advantage to LSTM over alternative RNNs, hidden [Markov models](https://en.wikipedia.org/wiki/Markov_model) and other sequence learning methods in numerous applications.
@@ -266,14 +308,15 @@ The expression long short-term refers to the fact that LSTM is a model for the s
 
 * [LTSM Model in TensorFlow](https://www.tensorflow.org/tutorials/sequences/recurrent)
 
-# Reinforcement Learning
-Reinforcement learning (RL) is an area of machine learning, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. The problem, due to its generality, is studied in many other disciplines, such as game theory, control theory, operations research, information theory, simulation-based optimization, multi-agent systems, swarm intelligence, statistics and genetic algorithms. In the operations research and control literature, reinforcement learning is called approximate dynamic programming, or neuro-dynamic programming. The problems of interest in reinforcement learning have also been studied in the theory of optimal control, which is concerned mostly with the existence and characterization of optimal solutions, and algorithms for their exact computation, and less with learning or approximation, particularly in the absence of a mathematical model of the environment. In economics and game theory, reinforcement learning may be used to explain how equilibrium may arise under bounded rationality.
+#
 
-In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
+# Reinforcement Learning
+Reinforcement learning (RL) is an area of machine learning, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. The problem, due to its generality, is studied in many other disciplines, such as **game theory, control theory, operations research, information theory, simulation-based optimization, multi-agent systems, swarm intelligence, statistics and genetic algorithms.** In the operations research and control literature, reinforcement learning is called approximate dynamic programming, or neuro-dynamic programming. The problems of interest in reinforcement learning have also been studied in the theory of optimal control, which is concerned mostly with the existence and characterization of optimal solutions, and algorithms for their exact computation, and less with learning or approximation, particularly in the absence of a mathematical model of the environment. In economics and game theory, reinforcement learning may be used to explain how equilibrium may arise under bounded rationality.
 
 ```
 Source: Wikipedia
 ```
+<<<<<<< HEAD
 ##  Q-learning
 
 The goal of Q-Learning is to learn a policy, which tells an agent which action to take under which circumstances. It does not require a model of the environment and can handle problems with stochastic transitions and rewards, without requiring adaptations.
@@ -287,6 +330,19 @@ For any **finite Markov decision process (FMDP)**, Q-learning eventually finds a
 The DeepMind system used a deep convolutional neural network, with layers of tiled convolutional filters to mimic the effects of receptive fields. Reinforcement learning is unstable or divergent when a nonlinear function approximator such as a neural network is used to represent Q. This instability comes from the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and the data distribution, and the correlations between Q and the target values.
 
 The technique used experience replay, a biologically inspired mechanism that [uses a random sample of prior actions instead of the most recent action to proceed](http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/). This removes correlations in the observation sequence and smooths changes in the data distribution. [Iterative update adjusts Q towards target values that are only periodically updated, further reducing correlations with the target](http://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf).
+=======
+
+In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
+
+*  [Using Machine Learning Agents Toolkit in a real game: a beginner’s guide](https://blogs.unity3d.com/2017/12/11/using-machine-learning-agents-in-a-real-game-a-beginners-guide/) - *The initial algorithm we came up with was allowing the agent to earn reward if, when not in a situation of danger, its distance from the target was decreasing. Similarly, when in a situation of danger, it would earn reward if its distance from the target was increasing (the agent was “running away”). Additionally, the algorithm was including a punishment given to the agent in case it was attacking when not allowed to.*
+
+*  [OpenAI Gym](https://gym.openai.com/) - a toolkit for developing and comparing reinforcement learning algorithms.
+
+*  [Intelligent Machines - A team of AI algorithms just crushed humans in a complex computer game](https://www.technologyreview.com/s/611536/a-team-of-ai-algorithms-just-crushed-expert-humans-in-a-complex-computer-game/)
+
+*  [Microsoft wants artificial intelligence to catch cheaters on Xbox Live](https://www.digitaltrends.com/computing/microsoft-patent-describes-machine-learning-cheat-detection/)
+
+>>>>>>> cd8f767baf7d456661a7c2f054e55ca3316ee4fd
 
 #  Transfer Learning
 
@@ -310,6 +366,17 @@ Transfer learning is a research problem in machine learning that focuses on stor
 * 
 * (+) Auto differentiation - easy multi-GPU/multi-node
 * (+) Active on Github. Lot's of new APIs
+
+### TensorFlow.js
+
+https://js.tensorflow.org/
+A JavaScript library for training and deploying ML models in the browser and on Node.js
+
+
+### TensorFlow Lite
+
+https://www.tensorflow.org/mobile/tflite/
+TensorFlow Lite is TensorFlow’s lightweight solution for mobile and embedded devices. It enables on-device machine learning inference with low latency and a small binary size. TensorFlow Lite also supports hardware acceleration with the Android Neural Networks API.
 
 ### Setup Tensorflow
 https://www.tensorflow.org/install/
@@ -453,3 +520,8 @@ Torch is a scientific computing framework with wide support for machine learning
 * [facenet - Facial Recognition Using TensorFlow](https://github.com/davidsandberg/facenet)
 
 * [Dog Breed Classification using Deep Learning: hands-on approach](https://towardsdatascience.com/dog-breed-classification-hands-on-approach-b5e4f88c333e)
+
+---
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/tw/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Taiwan License</a>.
+ © 2018 by Reiser Wang
