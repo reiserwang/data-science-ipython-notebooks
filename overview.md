@@ -1,4 +1,5 @@
-# Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science
+Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science
+===
 
 Reiser Wang 
 
@@ -9,6 +10,7 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 
 [image source](https://camo.githubusercontent.com/53bf6c54a8b70732f8fc8663807e6285cb281bd8/687474703a2f2f7363696b69742d6c6561726e2e6f72672f6465762f5f7374617469632f6d6c5f6d61702e706e67)
 
+===
 # Table of Contents
 - [Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science](#aritificial-intelligence-machine-learning-and-deep-learning-from-data-science)
 - [Table of Contents](#table-of-contents)
@@ -27,18 +29,19 @@ https://github.com/reiserwang/data-science-ipython-notebooks
     - [K-Means Clustering](#k-means-clustering)
     - [Logistic Regression](#logistic-regression)
         - [Showing Built-In Digits Datasets](#showing-built-in-digits-datasets)
-- [](#)
     - [Random Forests Clustering](#random-forests-clustering)
         - [Lab 2 - K-Means and Random Forest](#lab-2---k-means-and-random-forest)
-        - [Bagging (bootstrap aggregating)](#bagging-bootstrap-aggregating)
     - [Gradient Boosted Machines (GBM)](#gradient-boosted-machines-gbm)
     - [Gradient Boosting Classification](#gradient-boosting-classification)
         - [Lab - Gradient Boosting](#lab---gradient-boosting)
 - [Neural Networks](#neural-networks)
     - [Feed Forward Neural Networks](#feed-forward-neural-networks)
     - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
-        - [TensorFlow.js](#tensorflowjs)
-        - [TensorFlow Lite](#tensorflow-lite)
+        - [AlexNet](#alexnet)
+        - [ResNet](#resnet)
+        - [VGGNet](#vggnet)
+        - [GoogLeNet/Inception](#googlenetinception)
+        - [WReN](#wren)
     - [RNN (Recurrent Neuro Networks)](#rnn-recurrent-neuro-networks)
     - [LSTM (Long Short-Term Memory)](#lstm-long-short-term-memory)
 - [Reinforcement Learning](#reinforcement-learning)
@@ -47,6 +50,8 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 - [Transfer Learning](#transfer-learning)
 - [Deep Learning Frameworks](#deep-learning-frameworks)
     - [1. TensorFlow](#1-tensorflow)
+        - [TensorFlow.js](#tensorflowjs)
+        - [TensorFlow Lite](#tensorflow-lite)
         - [Setup Tensorflow](#setup-tensorflow)
         - [Lab 3 - Tensorflow Setup](#lab-3---tensorflow-setup)
         - [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](#lab-4---tensorflow-hub---using-machine-learning-moules-to-learn-flowers)
@@ -61,6 +66,8 @@ https://github.com/reiserwang/data-science-ipython-notebooks
         - [Applications](#applications)
         - [Business Application](#business-application)
         - [Other Interesting Topcis](#other-interesting-topcis)
+
+===
 
 # Introduction
 
@@ -250,7 +257,7 @@ CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流�
 https://www.tensorflow.org/deploy/distributed
 
 
-#  AlexNet
+###  AlexNet
 
 This architecture was one of the first deep networks to push ImageNet Classification accuracy by a significant stride in comparison to traditional methodologies. It is composed of 5 convolutional layers followed by 3 fully connected layers.
 
@@ -261,7 +268,7 @@ AlexNet, proposed by Alex Krizhevsky, uses ReLu(Rectified Linear Unit) for the n
 Another problem that this architecture solved was reducing the over-fitting by using a Dropout layer after every FC layer. Dropout layer has a probability,(p), associated with it and is applied at every neuron of the response map separately. It randomly switches off the activation with the probability p.  
 
 
-##  ResNet
+###  ResNet
 
 As residual neural networks do artificial neural network by utilizing skip connections or short-cuts to jump over some layers,  ResNets is the one that only skip over a single layer. It is the Convolutinal Neural Netwrks from Microsoft team that won ILSRVC 2015 competetiona and surpass the human performance on ImageNet dataset. 
 
@@ -270,12 +277,12 @@ Their are some variants, such as **ResNet50**, which is a 50 layer Residual Netw
 <p> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/ResNets.svg/220px-ResNets.svg.png"/>
 
 
-##  VGGNet
+###  VGGNet
 
 This architecture is from VGG group, Oxford. It makes the improvement over AlexNet by replacing large kernel-sized filters(11 and 5 in the first and second convolutional layer, respectively) with multiple 3X3 kernel-sized filters one after another. With a given receptive field(the effective area size of input image on which output depends), multiple stacked smaller size kernel is better than the one with a larger size kernel because multiple non-linear layers increases the depth of the network which enables it to learn more complex features, and that too at a lower cost. *For instance, a convolutional layer with 3X3 kernel size which takes 512 channels as input and outputs 512 channels, the order of calculations is 9X512X512. *
 
 
-## GoogLeNet/Inception
+### GoogLeNet/Inception
 
 While VGG achieves a phenomenal accuracy on ImageNet dataset, its deployment on even the most modest sized GPUs is a problem because of huge computational requirements, both in terms of memory and time. It becomes inefficient due to large width of convolutional layers.
 
@@ -288,7 +295,7 @@ Another change that GoogLeNet made, was to replace the fully-connected layers at
 
 ```[source](http://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/)``` ** (Highly recommend to read) **
 
-##  WReN
+###  WReN
 
 > To-Do add contents here
 
@@ -308,7 +315,6 @@ The expression long short-term refers to the fact that LSTM is a model for the s
 
 * [LTSM Model in TensorFlow](https://www.tensorflow.org/tutorials/sequences/recurrent)
 
-#
 
 # Reinforcement Learning
 Reinforcement learning (RL) is an area of machine learning, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. The problem, due to its generality, is studied in many other disciplines, such as **game theory, control theory, operations research, information theory, simulation-based optimization, multi-agent systems, swarm intelligence, statistics and genetic algorithms.** In the operations research and control literature, reinforcement learning is called approximate dynamic programming, or neuro-dynamic programming. The problems of interest in reinforcement learning have also been studied in the theory of optimal control, which is concerned mostly with the existence and characterization of optimal solutions, and algorithms for their exact computation, and less with learning or approximation, particularly in the absence of a mathematical model of the environment. In economics and game theory, reinforcement learning may be used to explain how equilibrium may arise under bounded rationality.
@@ -316,7 +322,6 @@ Reinforcement learning (RL) is an area of machine learning, concerned with how s
 ```
 Source: Wikipedia
 ```
-<<<<<<< HEAD
 ##  Q-learning
 
 The goal of Q-Learning is to learn a policy, which tells an agent which action to take under which circumstances. It does not require a model of the environment and can handle problems with stochastic transitions and rewards, without requiring adaptations.
@@ -330,19 +335,6 @@ For any **finite Markov decision process (FMDP)**, Q-learning eventually finds a
 The DeepMind system used a deep convolutional neural network, with layers of tiled convolutional filters to mimic the effects of receptive fields. Reinforcement learning is unstable or divergent when a nonlinear function approximator such as a neural network is used to represent Q. This instability comes from the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and the data distribution, and the correlations between Q and the target values.
 
 The technique used experience replay, a biologically inspired mechanism that [uses a random sample of prior actions instead of the most recent action to proceed](http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/). This removes correlations in the observation sequence and smooths changes in the data distribution. [Iterative update adjusts Q towards target values that are only periodically updated, further reducing correlations with the target](http://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf).
-=======
-
-In machine learning, the environment is typically formulated as a Markov Decision Process (MDP).
-
-*  [Using Machine Learning Agents Toolkit in a real game: a beginner’s guide](https://blogs.unity3d.com/2017/12/11/using-machine-learning-agents-in-a-real-game-a-beginners-guide/) - *The initial algorithm we came up with was allowing the agent to earn reward if, when not in a situation of danger, its distance from the target was decreasing. Similarly, when in a situation of danger, it would earn reward if its distance from the target was increasing (the agent was “running away”). Additionally, the algorithm was including a punishment given to the agent in case it was attacking when not allowed to.*
-
-*  [OpenAI Gym](https://gym.openai.com/) - a toolkit for developing and comparing reinforcement learning algorithms.
-
-*  [Intelligent Machines - A team of AI algorithms just crushed humans in a complex computer game](https://www.technologyreview.com/s/611536/a-team-of-ai-algorithms-just-crushed-expert-humans-in-a-complex-computer-game/)
-
-*  [Microsoft wants artificial intelligence to catch cheaters on Xbox Live](https://www.digitaltrends.com/computing/microsoft-patent-describes-machine-learning-cheat-detection/)
-
->>>>>>> cd8f767baf7d456661a7c2f054e55ca3316ee4fd
 
 #  Transfer Learning
 
