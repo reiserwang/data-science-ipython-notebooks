@@ -1,7 +1,7 @@
 Aritificial Intelligence, Machine Learning, and Deep Learning from Data Science
 ===
 
-Reiser Wang 
+Reiser Wang
 
 https://github.com/reiserwang/data-science-ipython-notebooks
 
@@ -17,25 +17,21 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 - [Introduction](#introduction)
 - [Fundamentals of Data Science](#fundamentals-of-data-science)
     - [Lose Function](#lose-function)
-        - [Lab - Demostration of Loss Functions](#lab---demostration-of-loss-functions)
     - [Monte Carlo method](#monte-carlo-method)
     - [Markov Decision Processes (MDP)](#markov-decision-processes-mdp)
-        - [Lab - Gradient Boosting](#lab---gradient-boosting)
 - [Fundamentals of Machine Leanring](#fundamentals-of-machine-leanring)
     - [The Model Approach](#the-model-approach)
     - [Training and Validation](#training-and-validation)
     - [Confusion Matrix](#confusion-matrix)
             - [Seaborn](#seaborn)
             - [Matplotlib](#matplotlib)
-        - [Lab 1 - Logistic Regression, Confusion Matrix, Seaborn/Maplotlib](#lab-1---logistic-regression-confusion-matrix-seabornmaplotlib)
+    - [Support Vectir Machine (SVN) - Classification / Regression](#support-vectir-machine-svn---classification--regression)
     - [K-Means Clustering](#k-means-clustering)
     - [Logistic Regression](#logistic-regression)
         - [Showing Built-In Digits Datasets](#showing-built-in-digits-datasets)
     - [Random Forests Clustering](#random-forests-clustering)
-        - [Lab 2 - K-Means and Random Forest](#lab-2---k-means-and-random-forest)
-    - [Gradient Boosted Machines (GBM)](#gradient-boosted-machines-gbm)
+    - [Gradient Boosted Machines (GBM) - Regression / Classification](#gradient-boosted-machines-gbm---regression--classification)
     - [Gradient Boosting Classification](#gradient-boosting-classification)
-        - [Lab - Gradient Boosting](#lab---gradient-boosting)
 - [Neural Networks](#neural-networks)
     - [Feed Forward Neural Networks](#feed-forward-neural-networks)
     - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
@@ -55,19 +51,18 @@ https://github.com/reiserwang/data-science-ipython-notebooks
         - [TensorFlow.js](#tensorflowjs)
         - [TensorFlow Lite](#tensorflow-lite)
         - [Setup Tensorflow](#setup-tensorflow)
-        - [Lab 3 - Tensorflow Setup](#lab-3---tensorflow-setup)
-        - [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](#lab-4---tensorflow-hub---using-machine-learning-moules-to-learn-flowers)
     - [2. Keras](#2-keras)
     - [3. Caffe](#3-caffe)
     - [4. Theano](#4-theano)
     - [5. Torch](#5-torch)
     - [Conclusions](#conclusions)
-    - [Oooray! You may now deep dive into specific sections.](#oooray-you-may-now-deep-dive-into-specific-sections)
-    - [References](#references)
-        - [Frameworks](#frameworks)
-        - [Applications](#applications)
-        - [Business Application](#business-application)
-        - [Other Interesting Topcis](#other-interesting-topcis)
+- [Labs and Samples](#labs-and-samples)
+- [References](#references)
+    - [Advanced Reading](#advanced-reading)
+    - [Frameworks](#frameworks)
+    - [Applications](#applications)
+    - [Business Application](#business-application)
+    - [Other Interesting Topcis](#other-interesting-topcis)
 
 ===
 
@@ -105,15 +100,17 @@ That would be very intneresting (and more practical ) problems to solve. And rem
 
 > [Source](https://buzzorange.com/techorange/2018/06/22/computer-learning-5-tips/)
 
-### [Lab - Demostration of Loss Functions](/lab/Loss%20Function.ipynb)
+
 
 ## Monte Carlo method
+
+Monte Carlo methods (or Monte Carlo experiments) are a broad class of computational algorithms that rely on **repeated random sampling** to obtain numerical results. Their essential idea is using randomness to solve problems that might be deterministic in principle. They are often used in physical and mathematical problems and are most useful when it is difficult or impossible to use other approaches. Monte Carlo methods are mainly used in three problem classes: optimization, numerical integration, and generating draws from a probability distribution.
+
+
 
 ## Markov Decision Processes (MDP)
 https://github.com/oyamad/mdp
 
-
-### [Lab - Gradient Boosting](/lab/Data%20Science%20Fundamentals%20in%20Python.ipynb)
 
 # Fundamentals of Machine Leanring
 
@@ -153,7 +150,12 @@ In the field of machine learning and specifically the problem of statistical cla
 
 [scikit - logistic regression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
-### [Lab 1 - Logistic Regression, Confusion Matrix, Seaborn/Maplotlib](/lab/Lab%201%20-%20Logistic%20Regression.ipynb)
+
+##  Support Vectir Machine (SVN) - Classification / Regression
+
+SVM is **supervised learning models** with associated learning algorithms that analyze data used for classification and regression analysis. Given a set of training examples, each marked as belonging to one or the other of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier (although methods such as Platt scaling exist to use SVM in a probabilistic classification setting). An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
+
+In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
 
 ## K-Means Clustering
 
@@ -223,13 +225,11 @@ Random frests or random decision forests are an ensemble learning method for cla
 
 <p><img src="images/scikitpy4.png" />
 
-### [Lab 2 - K-Means and Random Forest](/lab/Lab%202%20-%20K-Means%20and%20Random%20Forest.ipynb)
-
 
 >  **Bagging (bootstrap aggregating)** - a machine learning ensemble meta-algorithm designed to improve the stability and accuracy of machine learning algorithms used in statistical classification and regression. It also reduces variance and helps to avoid overfitting. Although it is usually applied to decision tree methods, it can be used with any type of method. Bagging is a special case of the model averaging approach. [Reference and example: Wikipedia, Ozone data](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
 
 
-## Gradient Boosted Machines (GBM)
+## Gradient Boosted Machines (GBM) - Regression / Classification
 
 Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. It builds the model in a stage-wise fashion like other boosting methods do, and it generalizes them by allowing optimization of an arbitrary differentiablPe loss function.
 
@@ -242,9 +242,6 @@ The overall GBM parameters can be divided into 3 categories:
 3. Miscellaneous Parameters: Other parameters for overall functioning.
 
 ## Gradient Boosting Classification
-
-
-### [Lab - Gradient Boosting](/lab/Gradient%20Boosting.ipynb)
 
 [scikit - Gradient Boosting Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html)
 
@@ -357,7 +354,6 @@ For any **finite Markov decision process (FMDP)**, Q-learning eventually finds a
 The DeepMind system used a deep convolutional neural network, with layers of tiled convolutional filters to mimic the effects of receptive fields. Reinforcement learning is unstable or divergent when a nonlinear function approximator such as a neural network is used to represent Q. This instability comes from the correlations present in the sequence of observations, the fact that small updates to Q may significantly change the policy and the data distribution, and the correlations between Q and the target values.
 
 The technique used experience replay, a biologically inspired mechanism that [uses a random sample of prior actions instead of the most recent action to proceed](http://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/). This removes correlations in the observation sequence and smooths changes in the data distribution. [Iterative update adjusts Q towards target values that are only periodically updated, further reducing correlations with the target](http://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf).
->>>>>>> 0259d9241c4217b988f0718834b46b94d5812b7e
 
 #  Transfer Learning
 
@@ -407,8 +403,6 @@ To install the GPU version of TensorFlow, enter the following command:
 
 > In Anaconda, you may use conda to create a virtual environment. However, within Anaconda, we recommend installing TensorFlow with the pip install command, not with the conda install command.
 
-### [Lab 3 - Tensorflow Setup](/lab/Lab%203%20-%20Tensorflow%20Setup.ipynb)
-
 *  [Tensorflow Tutorials](README.md#tensor-flow-tutorials)
 *  [Tensorflow Playground](htttp://playground.tensorflow.org)
 *  [Tensorflow Hub](https://www.tensorflow.org/hub/) - Library for reusable machine learning modules
@@ -423,8 +417,6 @@ tensorboard --logdir /tmp/retrain_logs
 ```
 
 Then navigate to http://localhost:6006 in your browser, and you'll see charts and graphs showing your models progress.
-
-### [Lab 4 - Tensorflow Hub - using machine learning moules to learn flowers](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
 
 <p><img src="images/validationAccuracy.png" />
 
@@ -489,12 +481,25 @@ Torch is a scientific computing framework with wide support for machine learning
 | Just curious about deep learning |   |   | ✔ |   |   |
 |*"I don't know Python at all"* |   |  ✔ |  |   |  ✔   |
 
+# Labs and Samples
 
-## Oooray! You may now deep dive into [specific sections](https://github.com/reiserwang/data-science-ipython-notebooks/blob/master/README.md).
+*  [Demostration of Loss Functions](/lab/Loss%20Function.ipynb)
+*  [Gradient Boosting](/lab/Data%20Science%20Fundamentals%20in%20Python.ipynb)
+* [**Lab 1** - Logistic Regression, Confusion Matrix, Seaborn/Maplotlib](/lab/Lab%201%20-%20Logistic%20Regression.ipynb)
+* [**Lab 2** - K-Means and Random Forest](/lab/Lab%202%20-%20K-Means%20and%20Random%20Forest.ipynb
+)
+* [Gradient Boosting](/lab/Gradient%20Boosting.ipynb)
+* [**Lab 3** - Tensorflow Setup](/lab/Lab%203%20-%20Tensorflow%20Setup.ipynb)
+* [**Lab 4** - Tensorflow Hub - using machine learning moules to learn flowers](/lab/Lab%204%20-%20Tensorflow%20Hub%20-%20using%20machine%20learning%20moules.ipynb)
 
-## References
 
-### Frameworks
+# References
+
+##  Advanced Reading
+*  [Data Science iPythn Notebooks](https://github.com/reiserwang/data-science-ipython-notebooks/blob/master/README.md).
+
+
+## Frameworks
 * [Deep learning framework](https://project.inria.fr/deeplearning/files/2016/05/DLFrameworks.pdf), Vucky K, Stephane L., et al.
 * [NVIDIA Deep Learning](https://developer.nvidia.com/deep-learning)
 * [Microsoft Cognitive Toolkit](https://www.microsoft.com/en-us/cognitive-toolkit/)
@@ -504,7 +509,7 @@ Torch is a scientific computing framework with wide support for machine learning
 
 * [Deep Learning on AWS](https://aws.amazon.com/tw/deep-learning/)
 
-### Applications
+## Applications
 <p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Artificial%20Intelligence/Notes%20from%20the%20AI%20frontier%20Applications%20and%20value%20of%20deep%20learning/SVGZ-AI-Impact-Ex2-Expanded.ashx"/>
 
 <p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Artificial%20Intelligence/Notes%20from%20the%20AI%20frontier%20Applications%20and%20value%20of%20deep%20learning/SVGZ-AI-Impact-Ex3-V2.ashx"/>
@@ -520,13 +525,13 @@ Torch is a scientific computing framework with wide support for machine learning
     * [Gephi](http://gephi.github.io)
 
 
-### Business Application
+## Business Application
 * [6 Examples of AI in Business Intelligence Applications](https://www.techemergence.com/ai-in-business-intelligence-applications/)
 * [Machine Learning in Finance – Present and Future Applications](https://www.techemergence.com/machine-learning-in-finance/)
 * [Notes from the AI frontier: Applications and value of deep learning](https://www.mckinsey.com/featured-insights/artificial-intelligence/notes-from-the-ai-frontier-applications-and-value-of-deep-learning?cid=other-eml-ttn-mip-mck-oth-1806&hlkid=d94b55c44cfb4258b7dc49f328629182&hctky=2823580&hdpid=81ba10a7-367d-45eb-96ab-f35ebad887ec)
 
 
-### Other Interesting Topcis
+## Other Interesting Topcis
 * [Google DeepMind's AlphaGo: How it works](https://www.tastehit.com/blog/google-deepmind-alphago-how-it-works/)
 <p img src="https://1.bp.blogspot.com/-b0FdTQ5Jeng/VwTeKVEuQxI/AAAAAAAAAGE/ZPAwqoT3EYU639YXhprEl-oRHKeg3xd1w/s1600/AlphaGoNetworksOverviewWithGoBoard.jpg"/>
 
