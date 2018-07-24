@@ -16,6 +16,8 @@ https://github.com/reiserwang/data-science-ipython-notebooks
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Fundamentals of Data Science](#fundamentals-of-data-science)
+    - [Lose Function](#lose-function)
+        - [Lab - Demostration of Loss Functions](#lab---demostration-of-loss-functions)
     - [Monte Carlo method](#monte-carlo-method)
     - [Markov Decision Processes (MDP)](#markov-decision-processes-mdp)
         - [Lab - Gradient Boosting](#lab---gradient-boosting)
@@ -38,7 +40,6 @@ https://github.com/reiserwang/data-science-ipython-notebooks
     - [Feed Forward Neural Networks](#feed-forward-neural-networks)
     - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
         - [AlexNet](#alexnet)
-    - [AlexNet](#alexnet)
         - [ResNet](#resnet)
         - [VGGNet](#vggnet)
         - [GoogLeNet/Inception](#googlenetinception)
@@ -81,10 +82,30 @@ This is a quick introduction to [Data Science IPyone Notebook]( https://github.c
 That would be very intneresting (and more practical ) problems to solve. And remember - AI/ML is about solving a problem in new way tht people didn't think of. If it succeeded human (like AlphaGo), it casts lights to we human beings to think about the problem from a new perspective - instead of the scary Hollywood movies.
 
 <p><img src="https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Artificial%20Intelligence/Notes%20from%20the%20AI%20frontier%20Applications%20and%20value%20of%20deep%20learning/SVGZ-AI-Impact-Ex1.ashx"/>
-~Source: McKinsey&Company~
+*Source: McKinsey*
 
 
 # Fundamentals of Data Science
+
+## Lose Function
+
+1. Mean Squqare Error (MSE; L2 Loss)
+   <p><img src="https://buzzorange.com/techorange/wp-content/uploads/sites/2/2018/06/1529651503728.jpg' />
+
+2. Mean Absolute Error (L1 Loss)
+   <p><img src="https://buzzorange.com/techorange/wp-content/uploads/sites/2/2018/06/1529650940657.jpg"/>
+
+3. Hauber Loss Funiction
+   <p><img src="https://buzzorange.com/techorange/wp-content/uploads/sites/2/2018/06/1529650718886.jpg"/>
+
+4. Log-Cosh Loss
+   <p><img src="https://buzzorange.com/techorange/wp-content/uploads/sites/2/2018/06/1529650678423.jpg"/>
+
+5. Quantile Loss
+
+> [Source](https://buzzorange.com/techorange/2018/06/22/computer-learning-5-tips/)
+
+### [Lab - Demostration of Loss Functions](/lab/Loss%20Function.ipynb)
 
 ## Monte Carlo method
 
@@ -258,11 +279,7 @@ CNN consists of **Convolution** , **ReLU** (Rectified Linear Unit 線性整流�
 https://www.tensorflow.org/deploy/distributed
 
 
-<<<<<<< HEAD
 ###  AlexNet
-=======
-##  AlexNet
->>>>>>> 0259d9241c4217b988f0718834b46b94d5812b7e
 
 This architecture was one of the first deep networks to push ImageNet Classification accuracy by a significant stride in comparison to traditional methodologies. It is composed of 5 convolutional layers followed by 3 fully connected layers.
 
